@@ -11,7 +11,7 @@
                     </svg>
                     <span>TrackLoader</span>
                 </div>
-                <p>Votre destination pour découvrir et acheter les meilleurs albums de musique de tous les genres.</p>
+                <p>Vous allez écouter quoi ce soir ?</p>
             </div>
 
             <!-- Navigation -->
