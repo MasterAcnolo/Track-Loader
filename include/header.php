@@ -11,15 +11,15 @@
             </a>
 
             <nav class="main-nav">
-                <a href="../index.php">Accueil</a>
-                <a href="../pages/genres.php">Genres</a>
-                <a href="../pages/cart.php">Panier <span id="cart-count" class="cart-badge">0</span></a>
-                <a href="../pages/account.php" id="account-link">Mon Compte</a>
+                <a href="./index.php">Accueil</a>
+                <a href="./pages/genres.php">Genres</a>
+                <a href="./pages/cart.php">Panier <span id="cart-count" class="cart-badge">0</span></a>
+                <a href="./pages/account.php" id="account-link">Mon Compte</a>
             </nav>
 
             <div class="header-actions">
-                <a href="../pages/login.php" class="btn btn-small">Connexion</a>
-                <a href="../pages/register.php" class="btn btn-small btn-secondary">Inscription</a>
+                <a href="./pages/login.php" class="btn btn-small">Connexion</a>
+                <a href="./pages/register.php" class="btn btn-small btn-secondary">Inscription</a>
             </div>
         </div>
     </div>

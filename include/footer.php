@@ -18,10 +18,10 @@
             <div class="footer-section">
                 <h3>Navigation</h3>
                 <ul>
-                    <li><a href="../index.php">Accueil</a></li>
-                    <li><a href="../pages/genres.php">Genres</a></li>
-                    <li><a href="../pages/cart.php">Panier</a></li>
-                    <li><a href="../pages/account.php">Mon Compte</a></li>
+                    <li><a href="./index.php">Accueil</a></li>
+                    <li><a href="./pages/genres.php">Genres</a></li>
+                    <li><a href="./pages/cart.php">Panier</a></li>
+                    <li><a href="./pages/account.php">Mon Compte</a></li>
                 </ul>
             </div>
 
