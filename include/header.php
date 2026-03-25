@@ -17,8 +17,24 @@
             </div>
 
             <div class="header-actions">
-                <a href="/Track-Loader/pages/login.php" class="btn btn-small">Connexion</a>
-                <a href="/Track-Loader/pages/register.php" class="btn btn-small btn-secondary">Inscription</a>
+                <?php if(!isset($_SESSION['user'])): ?>
+                    <!-- Si connecté -->
+                    <a href="/Track-Loader/pages/cart.php" class="cart-link">
+                        Panier
+                        <span id="cart-count" class="cart-badge">0</span>
+                    </a>
+
+                    <a href="/Track-Loader/pages/account.php">
+                        <!-- <?= htmlspecialchars($_SESSION['user']['pseudo']) ?> -->
+                        Axel
+                    </a>
+
+                    <!-- <a href="/Track-Loader/pages/logout.php" class="btn btn-small btn-secondary">Déconnexion</a> -->
+                <?php else: ?>
+                    <!-- Si non connecté -->
+                    <a href="/Track-Loader/pages/login.php" class="btn btn-small">Connexion</a>
+                    <a href="/Track-Loader/pages/register.php" class="btn btn-small btn-secondary">Inscription</a>
+                <?php endif; ?>
             </div>
 
         </div>
