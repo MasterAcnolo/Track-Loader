@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles/pages.css">
 </head>
 <body>
-    <!-- <?php include '../include/header.php'; ?> -->
+    <?php include '../include/header.php'; ?>
 
     <section class="page-header">
         <div class="container">
@@ -200,6 +200,6 @@
         </div>
     </section>
 
-    <!-- <?php include '../include/footer.php'; ?> -->
+    <?php include '../include/footer.php'; ?>
 </body>
 </html>
