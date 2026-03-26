@@ -5,17 +5,28 @@ $config = require __DIR__ . '/../api/.env.php';
 checkAndLoadSession($config);
 
 function checkAndLoadSession($config) {
-    if (!isset($_COOKIE['token'])) return false;
 
-    $data = verifyToken($_COOKIE['token'], $config);
+    $token = $_COOKIE['token'] ?? $_SESSION['token'] ?? null;
 
-    if (!$data) {
-        setcookie('token', '', time() - 3600, '/');
-        session_unset();
-        session_destroy();
+    if (!$token) {
         return false;
     }
 
+    $data = verifyToken($token, $config);
+
+    if (!$data) {
+        setcookie('token', '', time() - 3600, '/');
+
+        unset($_SESSION['token']);
+        unset($_SESSION['user']);
+
+        session_destroy();
+
+        return false;
+    }
+
+    $_SESSION['token'] = $token;
     $_SESSION['user'] = $data;
+
     return true;
 }
