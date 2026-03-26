@@ -8,11 +8,13 @@ function createUser($config) {
 
     if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         http_response_code(400);
+        header('Content-Type: application/json');
         echo json_encode(["error" => "Email invalide ou inexistant"]);
         exit;
     }
     if (strlen($password) < 8) {
         http_response_code(400);
+        header('Content-Type: application/json');
         echo json_encode(["error" => "Mot de passe trop court"]);
         exit;
     }
@@ -46,11 +48,13 @@ function loginUser($config){
 
     if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         http_response_code(400);
+        header('Content-Type: application/json');
         echo json_encode(["error" => "Email invalide ou inexistant"]);
         exit;
     }
     if (strlen($password) < 8) {
         http_response_code(400);
+        header('Content-Type: application/json');
         echo json_encode(["error" => "Mot de passe trop court"]);
         exit;
     }

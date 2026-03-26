@@ -7,6 +7,7 @@ function getAlbums() {
     if (!$albums) {
         
         http_response_code(500);
+        header('Content-Type: application/json');
         echo json_encode(["error" => "Erreur serveur ou aucun album trouvé"]);
         return;
     }
