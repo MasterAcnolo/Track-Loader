@@ -14,6 +14,10 @@ switch (true) {
     case str_starts_with($path, "/user"):
         require __DIR__ . '/routes/UserRoutes.php';
         exit;
+
+    case str_starts_with($path, "/albums"):
+        require __DIR__ . '/routes/AlbumsRoutes.php';
+        exit;
 }
 
 http_response_code(404);
