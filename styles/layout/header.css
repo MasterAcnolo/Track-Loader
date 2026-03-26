@@ -47,7 +47,7 @@
     border: 1px solid var(--border-color);
     border-radius: 999px;
     overflow: hidden;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .search-bar:focus-within {
