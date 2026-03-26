@@ -17,7 +17,7 @@
             </div>
 
             <div class="header-actions">
-                <?php if(!isset($_SESSION['user'])): ?>
+                <?php if(isset($_SESSION['user'])): ?>
                     <!-- Si connecté -->
                     <a href="/Track-Loader/pages/cart.php" class="cart-link">
                         Panier
@@ -25,8 +25,7 @@
                     </a>
 
                     <a href="/Track-Loader/pages/account.php">
-                        <!-- <?= htmlspecialchars($_SESSION['user']['pseudo']) ?> -->
-                        Axel
+                        <?= htmlspecialchars($_SESSION['user']['email']) ?>
                     </a>
 
                     <!-- <a href="/Track-Loader/pages/logout.php" class="btn btn-small btn-secondary">Déconnexion</a> -->
