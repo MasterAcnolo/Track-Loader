@@ -19,11 +19,7 @@
                         <p>Créez votre compte TrackLoader</p>
                     </div>
 
-                    <form action="/php/register.php" method="POST" class="auth-form">
-                        <div class="form-group">
-                            <label for="name">Nom complet</label>
-                            <input type="text" id="name" name="name" class="form-input" required>
-                        </div>
+                    <form action="/Track-Loader/api/user/register" method="POST" class="auth-form">
 
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -37,14 +33,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="confirm-password">Confirmer le mot de passe</label>
-                            <input type="password" id="confirm-password" name="confirm_password" class="form-input" minlength="6" required>
-                        </div>
-
-                        <div class="form-group">
                             <label class="checkbox-label">
                                 <input type="checkbox" name="terms" required>
                                 <span>J'accepte les <a href="#" class="link-primary">conditions d'utilisation</a> et la <a href="#" class="link-primary">politique de confidentialité</a></span>
+                            </label>
+                             <label class="checkbox-label">
+                                <input type="checkbox" name="remember">
+                                <span>Se souvenir de moi </span>
                             </label>
                         </div>
 
