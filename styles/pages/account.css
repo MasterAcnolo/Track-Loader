@@ -1,6 +1,5 @@
 .account-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
     gap: 2rem;
     margin-top: 2rem;
 }
