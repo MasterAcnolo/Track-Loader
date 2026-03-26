@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <label for="password">Mot de passe</label>
                             <input type="password" id="password" name="password" class="form-input" minlength="6" required>
-                            <small class="form-hint">Au moins 6 caractères</small>
+                            <small class="form-hint">Au moins 8 caractères</small>
                         </div>
 
                         <div class="form-group">
