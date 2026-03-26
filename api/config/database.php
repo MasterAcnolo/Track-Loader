@@ -1,6 +1,6 @@
 <?php
 
-$config = require '../.env.php';
+$config = require __DIR__ . '/../.env.php';
 
 try {
     $pdo = new PDO(
@@ -11,6 +11,4 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Erreur DB : " . $e->getMessage());
-};
-
-echo $config['DB_USER'];
+}
