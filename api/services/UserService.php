@@ -19,7 +19,6 @@ function createUserService($email, $password) {
     
 
     } catch (PDOException $e) {
-        http_response_code(500);
         $errorMessage = $e->getMessage();
 
         if(str_contains($errorMessage, "SQLSTATE[23000]")){
@@ -27,5 +26,35 @@ function createUserService($email, $password) {
         };
 
         return ["error" => $errorMessage];
+    }
+}
+
+function loginUserService($email, $password) {
+    global $pdo;
+
+    try {
+        $stmt = $pdo->prepare("
+            SELECT email, password FROM user 
+            WHERE email = :email
+        ");
+
+        $stmt->execute([
+            'email' => $email,
+        ]);
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if (!$user) {
+            return ["message" => "Invalid Credentials"];
+        }
+
+        if (!password_verify($password, $user['password'])) {
+            return ["message" => "Invalid Credentials"];
+        }
+
+        return ["message" => "success", "user" => $user];
+
+    } catch (PDOException $e) {
+        return ["error" => $e->getMessage()];
     }
 }

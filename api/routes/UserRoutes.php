@@ -9,6 +9,13 @@ switch ($path) {
         }
         break;
 
+    case "/user/login":
+        if ($method === "POST") {
+            loginUser($config);
+            break;
+        }
+        break;
+
     case "/user/logout":
         if ($method === "GET") {
             logoutUser();

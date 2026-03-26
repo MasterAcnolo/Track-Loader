@@ -19,7 +19,7 @@
                         <p>Connectez-vous à votre compte TrackLoader</p>
                     </div>
 
-                    <form action="../php/login.php" method="POST" class="auth-form">
+                    <form action="/Track-Loader/api/user/login" method="POST" class="auth-form">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" class="form-input" required>
@@ -35,7 +35,6 @@
                                 <input type="checkbox" name="remember">
                                 <span>Se souvenir de moi</span>
                             </label>
-                            <a href="./forgot-password.php" class="link-secondary">Mot de passe oublié ?</a>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-block">Se connecter</button>

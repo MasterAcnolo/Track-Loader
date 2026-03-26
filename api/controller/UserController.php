@@ -27,22 +27,64 @@ function createUser($config) {
 
         if($remember === "on"){
             setcookie("token", $token, time() + 3600, "/");
-        };
+        } else {
+            $_SESSION['token'] = $token;
+        }
 
         header("Location: /Track-Loader/");
         exit;
+
+    } else {
+        http_response_code(500);
+    }
+}
+
+function loginUser($config){
+    $email = trim($_POST['email'] ?? '');
+    $password = trim($_POST['password'] ?? '');
+    $remember = trim($_POST['remember'] ?? '');
+
+    if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        http_response_code(400);
+        echo json_encode(["error" => "Email invalide ou inexistant"]);
+        exit;
+    }
+    if (strlen($password) < 8) {
+        http_response_code(400);
+        echo json_encode(["error" => "Mot de passe trop court"]);
+        exit;
     }
 
-    echo json_encode($result);
+    $result = loginUserService($email, $password);
+
+    if($result['message'] === "success"){
+
+        require_once __DIR__ . '/../utils/TokenUtils.php';
+        
+        $token = createToken(['email' => $email, 'exp' => time() + 86400], $config);
+
+        if($remember === "on"){
+            setcookie("token", $token, time() + 3600, "/");
+        } else {
+            $_SESSION['token'] = $token;
+        }
+
+        header("Location: /Track-Loader/");
+        exit;
+
+    } else {
+        http_response_code(500);
+    }
+    
 }
 
 function logoutUser(){
-    if ($_SESSION){
+    if (session_status() === PHP_SESSION_ACTIVE){
         session_unset();
         session_destroy();
     };
 
-    if ($_COOKIE['token']){
+    if (isset($_COOKIE['token'])){
         unset($_COOKIE['token']); 
         setcookie('token', '', 1, '/'); 
     };
