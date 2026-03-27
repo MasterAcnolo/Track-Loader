@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../services/AlbumsServices.php';
 
+// ALBUMS
 function getAlbums() {
     $albums = getAlbumsServices();
 
