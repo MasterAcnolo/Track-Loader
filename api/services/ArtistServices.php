@@ -11,7 +11,8 @@ function getArtistServices() {
         $stmt = $pdo->prepare("
             SELECT DISTINCT author_name
             FROM album
-            WHERE author_name IS NOT NULL;
+            WHERE author_name IS NOT NULL
+            ORDER BY author_name ASC;
         ");
         $stmt->execute();
 
