@@ -1,37 +1,43 @@
 <?php
-
 require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../helpers/helpers.php';
 
-function getAlbumsServices($id = null) {
+function getAlbumsServices($id = null, $genre = null, $annee = null, $artiste = null) {
     global $pdo;
-
     try {
-        if ($id !== null) {
-            
-            $stmt = $pdo->prepare("
-                SELECT id_album, name, cover, style, tracklist, release_date, price, author_name, author_image_url
-                FROM album
-                WHERE id_album = :id
-            ");
-
-            $stmt->execute(['id' => $id]);
-
-            return $stmt->fetch(PDO::FETCH_ASSOC);
-        }
-
-        $stmt = $pdo->prepare("
+        $sql = "
             SELECT id_album, name, cover, style, tracklist, release_date, price, author_name, author_image_url
             FROM album
-        ");
-        $stmt->execute();
+            WHERE 1=1
+        ";
+        $params = [];
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if ($id !== null) {
+            $sql .= " AND id_album = :id";
+            $params['id'] = $id;
+        }
+        if ($genre !== null) {
+            $sql .= " AND style = :genre";
+            $params['genre'] = $genre;
+        }
+        if ($annee !== null) {
+            $sql .= " AND YEAR(release_date) = :annee";
+            $params['annee'] = $annee;
+        }
+        if ($artiste !== null) {
+            $sql .= " AND author_name LIKE :artiste";
+            $params['artiste'] = "%$artiste%";
+        }
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute($params);
+
+        return $id !== null
+            ? $stmt->fetch(PDO::FETCH_ASSOC)
+            : $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     } catch (PDOException $e) {
-        http_response_code(500);
-        header('Content-Type: application/json');
-        echo json_encode(["error" => $e->getMessage()]);
+        sendJson(500, ["error" => $e->getMessage()]);
     }
 }
-
 ?>

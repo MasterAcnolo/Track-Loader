@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../services/UserService.php';
+require_once __DIR__ . '/../helpers/helpers.php';
 
 function createUser($config) {
     $email = trim($_POST['email'] ?? '');
@@ -7,9 +8,7 @@ function createUser($config) {
     $remember = trim($_POST['remember'] ?? '');
 
     if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($password) < 8) {
-        http_response_code(400);
-        header('Content-Type: application/json');
-        echo json_encode(["error" => "Invalid Credentials"]);
+        sendJson(400, ["error" => "Invalid Credentials"]);
         notification('error', 'Invalid Credentials');
         exit;
     }
@@ -25,13 +24,17 @@ function createUser($config) {
             $_SESSION['token'] = $token;
         }
         notification('success', 'Inscription réussie, bienvenue !');
+
         http_response_code(303);
         header("Location: /Track-Loader/");
         exit;
+
     } elseif($result['message'] === "User already exists") {
+
         notification('error', 'Un compte existe déjà avec cet email.');
         http_response_code(303);
         header('Location: /Track-Loader/pages/register.php');
+
         exit;
     } else {
         notification('error', 'Erreur lors de l\'inscription.');
@@ -47,14 +50,11 @@ function loginUser($config){
     $remember = trim($_POST['remember'] ?? '');
 
     if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        http_response_code(400);
-        header('Content-Type: application/json');
-        echo json_encode(["error" => "Email invalide ou inexistant"]);
+        sendJson(400, ["error" => "Email invalide ou inexistant"]);
         exit;
     }
     if (strlen($password) < 8) {
-        http_response_code(400);
-        header('Content-Type: application/json');
+        sendJson(400, ["error" => "Mot de passe trop court"]);
         notification("error","Mot de passe trop court");
         exit;
     }

@@ -1,71 +1,33 @@
 <?php
+
 require_once __DIR__ . '/../services/AlbumsServices.php';
+require_once __DIR__ . '/../helpers/helpers.php';
 
 // ALBUMS
 function getAlbums() {
-    $albums = getAlbumsServices();
+    $genre = isset($_GET['genre']) ? trim($_GET['genre']) : null;
+    $annee = isset($_GET['annee']) ? trim($_GET['annee']) : null;
+    $artiste = isset($_GET['artiste']) ? trim($_GET['artiste']) : null;
+
+    $albums = getAlbumsServices(genre: $genre, annee: $annee, artiste: $artiste);
 
     if (!$albums) {
-        http_response_code(404);
-        header('Content-Type: application/json');
-        notification("error","Erreur serveur ou aucun album trouvé");
-        echo json_encode(["error" => "Aucun album trouvé"]);
+        sendJson(404, ["error" => "Aucun album trouvé"]);
         return;
     }
 
-    // Transformer tracklist en dico
-    for ($i = 0; $i < count($albums); $i++) {
-
-        if (!empty($albums[$i]['tracklist'])) {
-
-            $tracks = json_decode($albums[$i]['tracklist'], true);
-
-            if (is_array($tracks)) {
-
-                $newTracks = [];
-
-                foreach ($tracks as $index => $track) {
-
-                    $newTracks[$index + 1] = $track; 
-                }
-
-                $albums[$i]['tracklist'] = $newTracks;
-            }
-        }
-    }
-
-    http_response_code(200);
-    header('Content-Type: application/json');
-    echo json_encode($albums);
+    $albums = array_map('formatTracklist', $albums);
+    sendJson(200, $albums);
 }
 
 function getAlbumById($id) {
-    $album = getAlbumsServices($id);
+    $album = getAlbumsServices(id: $id);
 
     if (!$album) {
-        http_response_code(404);
-        header('Content-Type: application/json');
-        echo json_encode(["error" => "Album introuvable"]);
+        sendJson(404, ["error" => "Album introuvable"]);
         return;
     }
 
-    if (!empty($album['tracklist'])) {
-        $tracks = json_decode($album['tracklist'], true);
-
-        if (is_array($tracks)) {
-            $newTracks = [];
-
-            foreach ($tracks as $index => $track) {
-                $newTracks[$index + 1] = $track;
-            }
-
-            $album['tracklist'] = $newTracks;
-        }
-    }
-
-    http_response_code(200);
-    header('Content-Type: application/json');
-    echo json_encode($album);
+    sendJson(200, formatTracklist($album));
 }
-
 ?>

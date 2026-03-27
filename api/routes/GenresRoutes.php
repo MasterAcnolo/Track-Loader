@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/../controller/GenresController.php';
+require_once __DIR__ . '/../helpers/helpers.php';
 
 switch ($path) {
     case "/genres":
@@ -10,13 +11,5 @@ switch ($path) {
         break;
 
     default:
-        // /api/genre/LEGENRE
-        if ($method === "GET" && preg_match('#^/genres/(.+)$#', $path, $matches)) {
-            getAlbumsByGenre(urldecode($matches[1]));
-            break;
-        }
-
-        http_response_code(404);
-        header('Content-Type: application/json');
-        echo json_encode(["error" => "Route genre inconnue"]);
+        sendJson(404, ["error" => "Route genre inconnue"]);
 }

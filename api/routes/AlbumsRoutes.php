@@ -9,13 +9,6 @@ switch ($path) {
         }
         break;
 
-    case "/albums/search": // TODO
-        if ($method === "GET") {
-            searchAlbums($_GET['q'] ?? '');
-            break;
-        }
-        break;
-
     default:
         // /api/albums/ID
         if ($method === "GET" && preg_match('#^/albums/(\d+)$#', $path, $matches)) {

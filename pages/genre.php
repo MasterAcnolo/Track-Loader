@@ -28,7 +28,7 @@
             <?php
             $albums = [];
             if ($genre) {
-                $apiUrl = 'http://localhost/Track-Loader/api/genres/' . urlencode($genre);
+                $apiUrl = 'http://localhost/Track-Loader/api/albums?genre=' . urlencode($genre);
                 $response = @file_get_contents($apiUrl);
                 if ($response !== false) {
                     $albums = json_decode($response, true);
