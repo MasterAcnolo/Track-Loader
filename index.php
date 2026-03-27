@@ -55,55 +55,48 @@
             <div class="container">
                 <h2>Albums en vedette</h2>
                 <div class="albums-grid">
-                    <!-- PHP générera ces albums -->
-                    <!-- Exemple statique -->
-                    <a href="./pages/album.php?id=1" class="album-card">
-                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=500&q=80" alt="Abbey Road" class="album-cover">
-                        <div class="album-info">
-                            <h3 class="album-title">Abbey Road</h3>
-                            <p class="album-artist">The Beatles</p>
-                            <div class="album-details">
-                                <span class="album-price">15.99 €</span>
-                                <span class="album-genre">Rock</span>
-                            </div>
-                        </div>
-                    </a>
+
+                    <?php 
+
+                        $albumIds = [1, 2, 14, 18];
+                        $albums = [];
+
+                        foreach ($albumIds as $id) {
+                            $url = "http://localhost/Track-Loader/api/albums/$id";
+                            $response = file_get_contents($url);
+
+                            if ($response !== false) {
+                                $albumData = json_decode($response, true);
+                                if ($albumData) {
+                                    $albums[] = $albumData;
+                                }
+                            }
+                        }
+
+                    ?>
                     
-                    <a href="./pages/album.php?id=2" class="album-card">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&q=80" alt="Thriller" class="album-cover">
-                        <div class="album-info">
-                            <h3 class="album-title">Thriller</h3>
-                            <p class="album-artist">Michael Jackson</p>
-                            <div class="album-details">
-                                <span class="album-price">14.99 €</span>
-                                <span class="album-genre">Pop</span>
+                    <?php foreach ($albums as $album) : ?>
+
+                        <a href="./pages/album.php?id=<?= $album['id_album'] ?>" class="album-card">
+
+                            <img src="<?= $album['cover'] ?>" alt="<?= htmlspecialchars($album['name']) ?>" class="album-cover">
+
+                            <div class="album-info">
+
+                                <h3 class="album-title"><?= htmlspecialchars($album['name']) ?></h3>
+                                <p class="album-artist"><?= htmlspecialchars($album['author_name']) ?></p>
+
+                                <div class="album-details">
+
+                                    <span class="album-price"><?= number_format($album['price'], 2) ?> €</span>
+                                    <span class="album-genre"><?= htmlspecialchars($album['style']) ?></span>
+
+                                </div>
+
                             </div>
-                        </div>
-                    </a>
-                    
-                    <a href="./pages/album.php?id=3" class="album-card">
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500&q=80" alt="Random Access Memories" class="album-cover">
-                        <div class="album-info">
-                            <h3 class="album-title">Random Access Memories</h3>
-                            <p class="album-artist">Daft Punk</p>
-                            <div class="album-details">
-                                <span class="album-price">16.99 €</span>
-                                <span class="album-genre">Électronique</span>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a href="./pages/album.php?id=4" class="album-card">
-                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&q=80" alt="Kind of Blue" class="album-cover">
-                        <div class="album-info">
-                            <h3 class="album-title">Kind of Blue</h3>
-                            <p class="album-artist">Miles Davis</p>
-                            <div class="album-details">
-                                <span class="album-price">13.99 €</span>
-                                <span class="album-genre">Jazz</span>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>

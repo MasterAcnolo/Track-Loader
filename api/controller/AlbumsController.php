@@ -38,4 +38,33 @@ function getAlbums() {
     echo json_encode($albums);
 }
 
+function getAlbumById($id) {
+    $album = getAlbumsServices($id);
+
+    if (!$album) {
+        http_response_code(404);
+        header('Content-Type: application/json');
+        echo json_encode(["error" => "Album introuvable"]);
+        return;
+    }
+
+    if (!empty($album['tracklist'])) {
+        $tracks = json_decode($album['tracklist'], true);
+
+        if (is_array($tracks)) {
+            $newTracks = [];
+
+            foreach ($tracks as $index => $track) {
+                $newTracks[$index + 1] = $track;
+            }
+
+            $album['tracklist'] = $newTracks;
+        }
+    }
+
+    http_response_code(200);
+    header('Content-Type: application/json');
+    echo json_encode($album);
+}
+
 ?>

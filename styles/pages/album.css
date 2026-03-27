@@ -1,3 +1,28 @@
+.album-actions-bottom {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.album-price-nomargin {
+    margin-bottom: 0;
+}
+
+.album-cart-form {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-cart {
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
 .album-detail-grid {
     display: flex;
     align-items: flex-start;
@@ -12,6 +37,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    flex: 0 0 280px; 
 }
 
 .album-detail-cover {
@@ -19,6 +46,7 @@
     object-fit: cover;
     border-radius: 0.5rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1;
 }
 
 .album-detail-info h1 {
@@ -118,6 +146,15 @@
 }
 
 @media (max-width: 768px) {
+
+    .album-detail-info{
+        margin-left: 50px;
+    }
+
+    .album-detail-cover {
+        width: 70%;
+    }
+
     .album-detail-grid {
         flex-direction: column;
         gap: 2rem;
