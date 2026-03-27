@@ -9,6 +9,13 @@ switch ($path) {
         }
         break;
 
+    case "/albums/trending":
+        if ($method === "GET") {
+            getTrendingAlbums();
+            break;
+        }
+        break;
+
     default:
         // /api/albums/ID
         if ($method === "GET" && preg_match('#^/albums/(\d+)$#', $path, $matches)) {

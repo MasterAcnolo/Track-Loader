@@ -30,4 +30,17 @@ function getAlbumById($id) {
 
     sendJson(200, formatTracklist($album));
 }
+
+function getTrendingAlbums() {
+    // IDs d'albums en tendance
+    $trendingIds = [1, 2, 14, 18]; // Hybrid THeory - MEteora - HOPE - The Eminem Show
+    $albums = [];
+    foreach ($trendingIds as $id) {
+        $album = getAlbumsServices(id: $id);
+        if ($album) {
+            $albums[] = formatTracklist($album);
+        }
+    }
+    sendJson(200, $albums);
+}
 ?>

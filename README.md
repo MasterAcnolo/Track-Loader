@@ -14,6 +14,8 @@
 - `GET /api/albums?artiste=ARTISTE` — Albums filtrés par artiste (recherche partielle)
 - `GET /api/albums?genre=GENRE&annee=ANNEE&artiste=ARTISTE` — Tous les filtres combinables
 
+- `GET /api/albums/trending` — Liste des albums en tendance
+
 - `POST /api/user/login` — Connexion utilisateur
 - `POST /api/user/register` — Inscription utilisateur
 - `GET /api/user/logout` — Déconnexion

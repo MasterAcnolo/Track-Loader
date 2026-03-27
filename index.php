@@ -58,19 +58,11 @@
 
                     <?php 
 
-                        $albumIds = [1, 2, 14, 18];
                         $albums = [];
-
-                        foreach ($albumIds as $id) {
-                            $url = "http://localhost/Track-Loader/api/albums/$id";
-                            $response = file_get_contents($url);
-
-                            if ($response !== false) {
-                                $albumData = json_decode($response, true);
-                                if ($albumData) {
-                                    $albums[] = $albumData;
-                                }
-                            }
+                        $url = "http://localhost/Track-Loader/api/albums/trending";
+                        $response = @file_get_contents($url);
+                        if ($response !== false) {
+                            $albums = json_decode($response, true);
                         }
 
                     ?>
