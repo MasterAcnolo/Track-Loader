@@ -9,6 +9,7 @@
 - `GET /api/albums` — Liste tous les albums
 - `GET /api/albums/:ID` — Détail d’un album par son ID
 
+- `GET /api/albums?name=XXX` — Liste les albums filtrés par nom (Recherche Inexacte Accepté)
 - `GET /api/albums?genre=GENRE` — Liste les albums filtrés par genre
 - `GET /api/albums?annee=ANNEE` — Albums filtrés par année (ex : 2020)
 - `GET /api/albums?artiste=ARTISTE` — Albums filtrés par artiste (recherche partielle)

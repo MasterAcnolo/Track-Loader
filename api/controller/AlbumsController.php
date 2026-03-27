@@ -8,8 +8,9 @@ function getAlbums() {
     $genre = isset($_GET['genre']) ? trim($_GET['genre']) : null;
     $annee = isset($_GET['annee']) ? trim($_GET['annee']) : null;
     $artiste = isset($_GET['artiste']) ? trim($_GET['artiste']) : null;
+    $name = isset($_GET['name']) ? trim($_GET['name']) : null;
 
-    $albums = getAlbumsServices(genre: $genre, annee: $annee, artiste: $artiste);
+    $albums = getAlbumsServices(genre: $genre, annee: $annee, artiste: $artiste, name: $name);
 
     if (!$albums) {
         sendJson(404, ["error" => "Aucun album trouvé"]);

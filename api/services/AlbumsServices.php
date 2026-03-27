@@ -2,14 +2,14 @@
 require_once __DIR__ . '/../config/database.php';
 require_once __DIR__ . '/../helpers/helpers.php';
 
-function getAlbumsServices($id = null, $genre = null, $annee = null, $artiste = null) {
+function getAlbumsServices($id = null, $genre = null, $annee = null, $artiste = null, $name = null) {
     global $pdo;
     try {
         $sql = "
             SELECT id_album, name, cover, style, tracklist, release_date, price, author_name, author_image_url
             FROM album
             WHERE 1=1
-        ";
+        "; // le WHERE 1 = 1 ça permet d'ajouter après des query
         $params = [];
 
         if ($id !== null) {
@@ -26,7 +26,11 @@ function getAlbumsServices($id = null, $genre = null, $annee = null, $artiste = 
         }
         if ($artiste !== null) {
             $sql .= " AND author_name LIKE :artiste";
-            $params['artiste'] = "%$artiste%";
+            $params['artiste'] = "%$artiste%"; // Recherche Flou 
+        }
+        if ($name !== null) {
+            $sql .= " AND name LIKE :name";
+            $params['name'] = "%$name%";
         }
 
         $stmt = $pdo->prepare($sql);
