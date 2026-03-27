@@ -5,6 +5,14 @@ require_once __DIR__ . '/../helpers/helpers.php';
 
 // ALBUMS
 function getAlbums() {
+
+    $allowed = ['genre', 'annee', 'artiste', 'name'];
+    $unknown = array_diff(array_keys($_GET), $allowed);
+    if (count($unknown) > 0) {
+        sendJson(400, ["error" => "Bad Request : " . implode(', ', $unknown)]);
+        return;
+    }
+
     $genre = isset($_GET['genre']) ? trim($_GET['genre']) : null;
     $annee = isset($_GET['annee']) ? trim($_GET['annee']) : null;
     $artiste = isset($_GET['artiste']) ? trim($_GET['artiste']) : null;
