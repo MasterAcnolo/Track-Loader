@@ -11,12 +11,6 @@
     <?php include '../include/header.php'; ?>
     <?php include '../include/notif.php'; ?>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Mon Compte</h1>
-        </div>
-    </section>
-
     <section class="account-section">
         <div class="container">
 
@@ -63,6 +57,12 @@
                 $total_purchases = count($purchases);
 
             ?>
+
+            <section class="page-header">
+                    <div class="container">
+                        <h1>Mon Compte</h1>
+                    </div>
+            </section>
 
             <div class="account-grid">
 
