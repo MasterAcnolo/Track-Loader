@@ -10,41 +10,64 @@
 <body>
     <?php include '../include/header.php'; ?>
 
+    <?php
+    // Récupérer le genre depuis l'URL
+    $genre = isset($_GET['genre']) ? $_GET['genre'] : '';
+    $genreLabel = htmlspecialchars($genre);
+    ?>
     <section class="page-header">
         <div class="container">
-            <h1>Rock</h1>
-            <!-- PHP affichera le nom du genre ici -->
+            <h1><?= $genreLabel ?></h1>
             <p><a href="./genres.php" class="link-secondary">&larr; Retour aux genres</a></p>
         </div>
     </section>
 
     <section class="featured-albums">
         <div class="container">
-            <!-- PHP générera ces albums -->
+            <?php
+            $albums = [];
+            if ($genre) {
+                $apiUrl = 'http://localhost/Track-Loader/api/genres/' . urlencode($genre);
+                $response = @file_get_contents($apiUrl);
+                if ($response !== false) {
+                    $albums = json_decode($response, true);
+                }
+            }
+            ?>
             <div class="albums-grid">
-                <a href="./album.php?id=1" class="album-card">
-                    <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=500&q=80" alt="Abbey Road" class="album-cover">
-                    <div class="album-info">
-                        <h3 class="album-title">Abbey Road</h3>
-                        <p class="album-artist">The Beatles</p>
-                        <div class="album-details">
-                            <span class="album-price">15.99 €</span>
-                            <span class="album-genre">Rock</span>
-                        </div>
-                    </div>
-                </a>
-                
-                <a href="./album.php?id=5" class="album-card">
-                    <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=500&q=80" alt="The Dark Side of the Moon" class="album-cover">
-                    <div class="album-info">
-                        <h3 class="album-title">The Dark Side of the Moon</h3>
-                        <p class="album-artist">Pink Floyd</p>
-                        <div class="album-details">
-                            <span class="album-price">15.99 €</span>
-                            <span class="album-genre">Rock</span>
-                        </div>
-                    </div>
-                </a>
+
+                <?php if (!empty($albums) && is_array($albums)) : ?>
+
+                    <?php foreach ($albums as $album) : ?>
+
+                        <a href="./album.php?id=<?= htmlspecialchars($album['id_album']) ?>" class="album-card">
+
+                            <img src="<?= htmlspecialchars($album['cover']) ?>" alt="<?= htmlspecialchars($album['name']) ?>" class="album-cover">
+                            
+                            <div class="album-info">
+
+                                <h3 class="album-title"><?= htmlspecialchars($album['name']) ?></h3>
+
+                                <p class="album-artist"><?= htmlspecialchars($album['author_name']) ?></p>
+
+                                <div class="album-details">
+
+                                    <span class="album-price"><?= htmlspecialchars($album['price']) ?> €</span>
+                                    <span class="album-genre"><?= htmlspecialchars($album['style']) ?></span>
+                                    
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    <?php endforeach; ?>
+
+                <?php else : ?>
+
+                    <p>Aucun album trouvé pour ce genre.</p>
+
+                <?php endif; ?>
             </div>
         </div>
     </section>

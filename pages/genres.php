@@ -20,31 +20,27 @@
     <section class="genres-section">
         <div class="container">
             <div class="genres-grid">
-                <!-- PHP générera ces genres -->
-                <a href="./genre.php?genre=rock" class="genre-card">
-                    <h3>Rock</h3>
-                    <p>3 albums</p>
-                </a>
+                <?php
                 
-                <a href="./genre.php?genre=pop" class="genre-card">
-                    <h3>Pop</h3>
-                    <p>2 albums</p>
-                </a>
-                
-                <a href="./genre.php?genre=jazz" class="genre-card">
-                    <h3>Jazz</h3>
-                    <p>2 albums</p>
-                </a>
-                
-                <a href="./genre.php?genre=hip-hop" class="genre-card">
-                    <h3>Hip-Hop</h3>
-                    <p>1 album</p>
-                </a>
-                
-                <a href="./genre.php?genre=electronique" class="genre-card">
-                    <h3>Électronique</h3>
-                    <p>2 albums</p>
-                </a>
+                $genres = [];
+                $apiUrl = 'http://localhost/Track-Loader/api/genres';
+
+                $response = @file_get_contents($apiUrl);
+                if ($response !== false) {
+                    $genres = json_decode($response, true);
+                }
+
+                if (!empty($genres) && is_array($genres)) {
+                    foreach ($genres as $genre) {
+                        $genreUrl = './genre.php?genre=' . urlencode($genre);
+                        $genreLabel = htmlspecialchars($genre);
+                        $genreClass = strtolower(preg_replace('/[^a-z0-9]+/i', '-', $genre));
+                        echo "<a href='$genreUrl' class='genre-card $genreClass'><div class='genre-img'></div><h3>$genreLabel</h3></a>";
+                    }
+                } else {
+                    echo "<p>Aucun genre trouvé.</p>";
+                }
+                ?>
             </div>
         </div>
     </section>
