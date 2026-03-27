@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS trackloader;
+
 USE trackloader;
 
 -- Suppression des tables dans l'ordre pour éviter les conflits de FK

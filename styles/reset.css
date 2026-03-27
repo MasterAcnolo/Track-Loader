@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
 
 body {
@@ -15,7 +16,18 @@ body {
     background-color: var(--bg-gray);
     overflow-x: hidden;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+html, body {
+    min-height: 100vh;
+}
+
+main, .main-content, .container, .account-section, .page-section, .genres-section {
+    flex: 1 0 auto;
+}
+
 
 img {
     max-width: 100%;
