@@ -23,6 +23,10 @@ switch (true) {
     case str_starts_with($path, "/genre"):
         require __DIR__ . '/routes/GenresRoutes.php';
         exit;
+
+    case str_starts_with($path, "/search"):
+        require __DIR__ . '/routes/SearchRoutes.php';
+        exit;
 }
 
 sendJson(404, ["error" => "Route not found"]);

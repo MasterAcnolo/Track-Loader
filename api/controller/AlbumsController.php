@@ -52,4 +52,20 @@ function getTrendingAlbums() {
     }
     sendJson(200, $albums);
 }
+
+// Recherche globale sur nom ou artiste
+function searchAlbums($query) {
+    $q = trim($query);
+    if ($q === '') {
+        sendJson(400, ["error" => "Paramètre 'q' requis"]);
+        return;
+    }
+    $albums = searchAlbumsByNameOrArtist($q);
+    if (!$albums) {
+        sendJson(404, ["error" => "Aucun album trouvé"]);
+        return;
+    }
+    $albums = array_map('formatTracklist', $albums);
+    sendJson(200, $albums);
+}
 ?>

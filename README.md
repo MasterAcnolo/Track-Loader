@@ -17,6 +17,8 @@
 
 - `GET /api/albums/trending` — Liste des albums en tendance
 
+- `GET /api/search?q=QUERY` — Recherche globale (nom ou artiste)
+
 - `POST /api/user/login` — Connexion utilisateur
 - `POST /api/user/register` — Inscription utilisateur
 - `GET /api/user/logout` — Déconnexion
