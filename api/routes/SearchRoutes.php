@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../controller/AlbumsController.php';
+require_once __DIR__ . '/../controller/SearchController.php';
 
 switch ($path) {
     case "/search":
