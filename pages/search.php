@@ -6,6 +6,7 @@
     <title>Recherche - TrackLoader</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/pages.css">
+    <link rel="icon" type="image/webp" href="../assets/icon/icon.webp">
 </head>
 <body>
     <?php include '../include/header.php'; ?>
