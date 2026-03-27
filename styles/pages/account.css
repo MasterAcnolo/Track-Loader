@@ -1,24 +1,38 @@
 .account-grid {
-    display: flex;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
+    align-items: stretch;
 }
 
-.account-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/* Carte pleine largeur (ex: historique d'achats) */
+.card-wide {
+    grid-column: 1 / -1;
 }
 
-.account-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.card-wide .card-body {
+    max-height: 450px;
+    overflow-y: auto;
 }
 
-.logout-section {
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
+/* Zone de danger : toujours en dernier, pleine largeur */
+.card-last {
+    order: 999;
+    grid-column: 1 / -1;
+}
+
+/* Desktop 3 colonnes : card-wide sur 2 cols */
+@media (min-width: 900px) {
+    .account-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card-wide {
+        grid-column: span 2;
+    }
+    .card-last {
+        grid-column: 1 / -1;
+    }
 }
 
 .purchase-item {
@@ -97,7 +111,6 @@
     border: 2px solid var(--danger-color);
     border-radius: 0.5rem;
     padding: 1.5rem;
-    background-color: #fef2f2;
 }
 
 .danger-zone h3 {
@@ -131,16 +144,21 @@
     margin-bottom: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .account-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    .card-wide,
+    .card-last {
+        grid-column: 1 / -1;
+    }
+
     .purchase-item {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .purchase-cover {
         width: 100%;
         height: auto;
