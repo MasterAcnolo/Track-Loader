@@ -5,10 +5,10 @@ function getAlbums() {
     $albums = getAlbumsServices();
 
     if (!$albums) {
-        
-        http_response_code(500);
+        http_response_code(404);
         header('Content-Type: application/json');
-        echo json_encode(["error" => "Erreur serveur ou aucun album trouvé"]);
+        notification("error","Erreur serveur ou aucun album trouvé");
+        echo json_encode(["error" => "Aucun album trouvé"]);
         return;
     }
 
@@ -33,6 +33,7 @@ function getAlbums() {
         }
     }
 
+    http_response_code(200);
     header('Content-Type: application/json');
     echo json_encode($albums);
 }

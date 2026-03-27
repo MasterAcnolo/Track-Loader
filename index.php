@@ -20,6 +20,7 @@
 <body>
 
     <?php include 'include/header.php' ?>
+    <?php include 'include/notif.php'; ?>
 
     <body>
         <!-- Hero Section -->

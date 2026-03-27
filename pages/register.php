@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php include '../include/header.php'; ?>
+    <?php include '../include/notif.php'; ?>
 
     <section class="auth-section">
         <div class="container">

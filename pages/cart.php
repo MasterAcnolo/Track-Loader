@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php include '../include/header.php'; ?>
+    <?php include '../include/notif.php'; ?>
 
     <section class="page-header">
         <div class="container">
