@@ -24,6 +24,10 @@ switch (true) {
         require __DIR__ . '/routes/GenresRoutes.php';
         exit;
 
+    case str_starts_with($path, "/artist"):
+        require __DIR__ . '/routes/ArtistRoutes.php';
+        exit;
+
     case str_starts_with($path, "/search"):
         require __DIR__ . '/routes/SearchRoutes.php';
         exit;
