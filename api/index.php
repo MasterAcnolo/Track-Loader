@@ -1,6 +1,7 @@
 <?php
-$method = $_SERVER['REQUEST_METHOD'];
+require_once __DIR__ . '/helpers/helpers.php';
 
+$method = $_SERVER['REQUEST_METHOD'];
 
 $fullPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $cleanPath = trim(str_replace('/Track-Loader/api', '', $fullPath), '/');
@@ -24,8 +25,6 @@ switch (true) {
         exit;
 }
 
-http_response_code(404);
-header('Content-Type: application/json');
-echo json_encode(["error" => "Route not found"]);
+sendJson(404, ["error" => "Route not found"]);
 
 ?>
