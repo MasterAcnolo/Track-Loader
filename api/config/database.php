@@ -1,6 +1,6 @@
 <?php
 
-$config = require __DIR__ . '/../.env.php';
+require __DIR__ . '/config.php';
 
 try {
     $pdo = new PDO(

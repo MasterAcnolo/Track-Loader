@@ -1,5 +1,6 @@
 <?php
-$config = require __DIR__ . '/../.env.php';
+
+$config = require __DIR__ . '/../config/config.php';
 
 function createToken($data, $config) {
     $payload = base64_encode(json_encode($data));
