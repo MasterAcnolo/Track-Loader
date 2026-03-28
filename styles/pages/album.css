@@ -1,6 +1,95 @@
+
+.album-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0 3rem;
+    min-height: 420px;
+}
+
+.album-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px) brightness(0.5);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.album-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.album-detail-grid {
+    display: flex;
+    align-items: stretch;
+    gap: 3rem;
+    justify-content: flex-start;
+}
+
+.album-detail-cover-container {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 2rem;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+.album-detail-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+}
+
+/* Textes sur fond sombre */
+.album-detail-info h1,
+.album-detail-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.4rem;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.album-detail-info > span {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.album-detail-artist {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.album-detail-artist a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.album-detail-artist a:hover {
+    color: #fff;
+}
+
+.badge.album-genre {
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.album-price-large {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
 .album-actions-bottom {
     display: flex;
-    margin-top: 20px;
+    margin-top: 1.5rem;
     align-items: center;
     gap: 1.5rem;
 }
@@ -14,166 +103,119 @@
     justify-content: center;
 }
 
-.btn-cart {
-    min-width: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.album-detail-grid {
-    display: flex;
-    align-items: flex-start;
-    gap: 4rem;
-    margin-top: 2rem;
-    justify-content: center;
-}
-
-.album-detail-cover-container {
-    top: 2rem;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    flex: 0 0 280px; 
-}
-
-.album-detail-cover {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 0.5rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 1 / 1;
-}
-
-.album-detail-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.album-detail-artist {
-    font-size: 1.5rem;
-    color: var(--text-secondary);
-    margin-bottom: 1.5rem;
-}
-
-.album-meta {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.album-meta-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.album-meta-label {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.25rem;
-}
-
-.album-meta-value {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.album-price-large {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.album-actions {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 3rem;
-}
-
-.tracklist h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary);
-}
-
-.track-list {
-    background-color: var(--bg-white);
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
 .track-item {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid var(--border-color);
-    transition: background-color 0.2s;
+    gap: 14px;
+    padding: 13px 20px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.15s;
+    cursor: pointer;
 }
 
-.track-item:last-child {
-    border-bottom: none;
-}
-
-.track-item:hover {
-    background-color: var(--bg-gray);
-}
+.track-item:last-child { border-bottom: none; }
+.track-item:hover { background: rgba(255, 255, 255, 0.06); }
 
 .track-number {
-    width: 40px;
+    width: 22px;
     text-align: center;
-    font-weight: 600;
-    color: var(--text-secondary);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
 }
-
+.track-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
 .track-title {
     flex: 1;
-    color: var(--text-primary);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
 }
 
-.track-duration {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
+.tracklist-glass {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.tracklist-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px 14px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.tracklist-header span {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.tracklist-header .track-count {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 768px) {
-
-    .album-detail-info{
-        margin-left: 50px;
-    }
-
-    .album-detail-cover {
-        width: 70%;
-    }
+    .album-hero { padding: 2rem 0; }
 
     .album-detail-grid {
         flex-direction: column;
-        gap: 2rem;
-        align-items: stretch;
+        gap: 1.5rem;
+        align-items: center;
     }
+
     .album-detail-cover-container {
         position: static;
-        justify-content: center;
+        flex: 0 0 auto;
+        width: 60%;
+        align-self: center;
     }
-    .album-detail-info h1 {
-        font-size: 1.75rem;
-    }
-    .album-detail-artist {
-        font-size: 1.25rem;
-    }
-    .album-meta {
-        gap: 1rem;
-    }
-    .album-actions {
+
+    /* ← tout ce bloc est nouveau */
+    .album-detail-info {
+        width: 100%;
+        text-align: center;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .album-detail-info h1,
+    .album-detail-title {
+        font-size: 1.5rem;
+    }
+
+    .album-detail-artist {
+        font-size: 1.1rem;
+    }
+
+    .album-actions-bottom {
+        flex-direction: row;        /* ← prix + bouton côte à côte */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .album-price-large {
+        font-size: 1.5rem;
     }
 }
