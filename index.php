@@ -9,13 +9,6 @@
     <link rel="stylesheet" href="./styles/pages.css">
 
     <link rel="icon" href="assets/icon/icon.webp">
-
-    <!-- Open Graph (Discord, Facebook, etc.) -->
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    <meta property="og:type" content="website">
 </head>
 <body>
 
