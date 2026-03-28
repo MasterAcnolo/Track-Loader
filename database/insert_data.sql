@@ -9,13 +9,13 @@ VALUES
 -- 1. Hybrid Theory (2000) — MBID release : 5fc6445c-05ce-34e7-ab31-63bf7d3a9f24
 (
   'Hybrid Theory',
-  'https://m.media-amazon.com/images/I/71PlJet28jL._AC_UF1000,1000_QL80_.jpg',
+  'https://cdn-images.dzcdn.net/images/cover/033a271b5ec10842c287827c39244fb5/0x1900-000000-80-0-0.jpg',
   'Rock-Alternatif',
   '["Papercut","One Step Closer","With You","Points of Authority","Crawling","Runaway","By Myself","In the End","A Place for My Head","Forgotten","Cure for the Itch","Pushing Me Away", "My December", "High Voltage"]',
   '2000-10-24',
   12,
   'Linkin Park',
-  'https://www.billboard.com/wp-content/uploads/2023/04/01-Linkin-Park-cr-James-Minchin-billboard-1548.jpg'
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
 -- 2. Meteora (2003) — MBID release : 42888e58-7b4b-4626-a04a-a3e9c2e5e68c
@@ -27,7 +27,7 @@ VALUES
   '2003-03-25',
   12,
   'Linkin Park',
-  'https://www.billboard.com/wp-content/uploads/2023/04/01-Linkin-Park-cr-James-Minchin-billboard-1548.jpg'
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
 -- 3. Minutes to Midnight (2007) — MBID release : 127e18cd-3e5c-4308-9345-e1a8297a2ff5
@@ -39,7 +39,7 @@ VALUES
   '2007-05-14',
   13,
   'Linkin Park',
-  'https://www.billboard.com/wp-content/uploads/2023/04/01-Linkin-Park-cr-James-Minchin-billboard-1548.jpg'
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
 -- 4. A Thousand Suns (2010) — MBID release : 95b05941-e98f-477e-a81c-3bcdd7c6ad71
@@ -51,7 +51,7 @@ VALUES
   '2010-09-14',
   13,
   'Linkin Park',
-  'https://www.billboard.com/wp-content/uploads/2023/04/01-Linkin-Park-cr-James-Minchin-billboard-1548.jpg'
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
 -- 5. Living Things (2012) — MBID release : 658b008f-6f56-48e4-9363-8de9e3c5d4d3
@@ -63,7 +63,7 @@ VALUES
   '2012-06-26',
   13,
   'Linkin Park',
-  'https://www.billboard.com/wp-content/uploads/2023/04/01-Linkin-Park-cr-James-Minchin-billboard-1548.jpg'
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
 -- 6. The Hunting Party (2014) — MBID release : cf1c9b8d-aaff-4b46-b730-59f5fcc3daa8
@@ -75,7 +75,7 @@ VALUES
   '2014-06-13',
   13,
   'Linkin Park',
-  'https://www.billboard.com/wp-content/uploads/2023/04/01-Linkin-Park-cr-James-Minchin-billboard-1548.jpg'
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
 -- 7. One More Light (2017) — MBID release : b85e7ce4-3805-414e-af40-4e8d60cc7007
@@ -87,7 +87,7 @@ VALUES
   '2017-05-19',
   13,
   'Linkin Park',
-  'https://www.billboard.com/wp-content/uploads/2023/04/01-Linkin-Park-cr-James-Minchin-billboard-1548.jpg'
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
 -- 8. From Zero (2024) — MBID release : 1122464e-d7e3-4a11-9a9f-c3f3568f2e76
@@ -115,7 +115,7 @@ VALUES
   '2015-03-31',
   10,
   'NF',
-  'https://criativaradio.com/wp-content/uploads/2025/10/NF2023-e1676577588380-1024x691-1-1.jpg'
+  'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
 -- 10. Therapy Session (2016) — MBID release : 3f2b91e2-1c0d-4b3e-9b3e-2f1e3c5d4e5f
@@ -127,7 +127,7 @@ VALUES
   '2016-04-22',
   10,
   'NF',
-  'https://criativaradio.com/wp-content/uploads/2025/10/NF2023-e1676577588380-1024x691-1-1.jpg'
+  'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
 -- 11. Perception (2017) — MBID release : a1b2c3d4-e5f6-7890-abcd-ef1234567890
@@ -139,7 +139,7 @@ VALUES
   '2017-10-06',
   11,
   'NF',
-  'https://criativaradio.com/wp-content/uploads/2025/10/NF2023-e1676577588380-1024x691-1-1.jpg'
+  'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
 -- 12. The Search (2019) — MBID release : b2c3d4e5-f6a7-8901-bcde-f12345678901
@@ -151,7 +151,7 @@ VALUES
   '2019-07-26',
   12,
   'NF',
-  'https://criativaradio.com/wp-content/uploads/2025/10/NF2023-e1676577588380-1024x691-1-1.jpg'
+  'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
 -- 13. CLOUDS (THE MIXTAPE) (2021) — MBID release : c3d4e5f6-a7b8-9012-cdef-123456789012
@@ -163,7 +163,7 @@ VALUES
   '2021-03-26',
   11,
   'NF',
-  'https://criativaradio.com/wp-content/uploads/2025/10/NF2023-e1676577588380-1024x691-1-1.jpg'
+  'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
 -- 14. HOPE (2023) — MBID release : d4e5f6a7-b8c9-0123-defa-234567890123
@@ -175,7 +175,7 @@ VALUES
   '2023-04-07',
   12,
   'NF',
-  'https://criativaradio.com/wp-content/uploads/2025/10/NF2023-e1676577588380-1024x691-1-1.jpg'
+  'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
 -- 15. FEAR (2025) — MBID release : e5f6a7b8-c9d0-1234-efab-345678901234
@@ -187,7 +187,7 @@ VALUES
   '2025-11-14',
   10,
   'NF',
-  'https://criativaradio.com/wp-content/uploads/2025/10/NF2023-e1676577588380-1024x691-1-1.jpg'
+  'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
 -- ============================================================
@@ -203,7 +203,7 @@ VALUES
   '1999-02-23',
   11,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 17. The Marshall Mathers LP (2000) — MBID release : d99e995e-3726-4c6b-90ab-b9b0b8c3e3a0
@@ -215,7 +215,7 @@ VALUES
   '2000-05-23',
   12,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 18. The Eminem Show (2002) — MBID release : 40a7080b-40e4-3b24-847a-d21aaee5f414
@@ -227,7 +227,7 @@ VALUES
   '2002-05-26',
   12,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 19. Encore (2004) — MBID release : c71fe58f-7a71-31a8-a41b-7e7351360992
@@ -239,7 +239,7 @@ VALUES
   '2004-11-12',
   12,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 20. Relapse (2009) — MBID release : 88a856de-d5d1-4225-9612-8858b2f5353f
@@ -251,7 +251,7 @@ VALUES
   '2009-05-15',
   12,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 21. Recovery (2010) — MBID release : dddf01df-f9f1-4ba6-b414-5ddf1984fc7f
@@ -263,7 +263,7 @@ VALUES
   '2010-06-18',
   12,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 22. The Marshall Mathers LP 2 (2013) — MBID release : 68b762a7-9db0-48a6-9817-9643110db99d
@@ -275,7 +275,7 @@ VALUES
   '2013-11-05',
   13,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 23. Revival (2017) — MBID release : f7a8b9c0-d1e2-3456-fabc-456789012345
@@ -287,7 +287,7 @@ VALUES
   '2017-12-15',
   13,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 24. Kamikaze (2018) — MBID release : bb764832-4e78-4967-aa05-9db5638f8283
@@ -295,11 +295,11 @@ VALUES
   'Kamikaze',
   'https://m.media-amazon.com/images/I/91AMfe72gCL._UF894,1000_QL80_.jpg',
   'Hip-Hop',
-  '["The Ringer","Greatest","Lucky You (feat. Joyner Lucas)","Paul (Skit)","Normal","Em Calls Paul (Skit)","Stepping Stone","Not Alike (feat. Royce da 5''9\")","Kamikaze","Fall","Nice Guy (feat. Jessie Reyez)","Good Guy (feat. Jessie Reyez)","Venom"]',
+  '["The Ringer","Greatest","Lucky You (feat. Joyner Lucas)","Paul (Skit)","Normal","Em Calls Paul (Skit)","Stepping Stone","Not Alike (feat. Royce da 5''9)","Kamikaze","Fall","Nice Guy (feat. Jessie Reyez)","Good Guy (feat. Jessie Reyez)","Venom"]',
   '2018-08-31',
   13,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 25. Music to Be Murdered By (2020) — MBID release : a8b9c0d1-e2f3-4567-abcd-567890123456
@@ -311,7 +311,7 @@ VALUES
   '2020-01-17',
   14,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
 -- 26. The Death of Slim Shady (Coup de Grâce) (2024) — MBID release : b9c0d1e2-f3a4-5678-bcde-678901234567
@@ -323,5 +323,5 @@ VALUES
   '2024-07-12',
   14,
   'Eminem',
-  'https://www.fan-lexikon.de/musik/eminem/bilder/xl/eminem-13951.jpg'
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 );
