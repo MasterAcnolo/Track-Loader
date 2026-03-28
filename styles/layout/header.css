@@ -131,7 +131,7 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1090px) {
     .header-content {
         flex-wrap: wrap;
         gap: 0.75rem;
@@ -155,14 +155,10 @@
     }
 
     .header-actions a {
-        font-size: 0.7rem !important; 
         padding: 0 0.4rem;
     }
 
     .header-actions a[href*="account"] {
-        max-width: 120px;
-        overflow: hidden;
-        color: red;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
