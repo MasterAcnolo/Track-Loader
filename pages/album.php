@@ -99,7 +99,8 @@ if ($album && !empty($album['tracklist']) && is_array($album['tracklist'])) {
                             <?= number_format($album['price'], 2) ?> €
                         </div>
  
-                        <form action="<?php echo BASE_URL . '/api/user/register/' . $album['id_album'] ?>" method="POST" class="album-cart-form">
+                        <form action="<?php echo BASE_URL . '/api/panier/' . $album['id_album'] ?>" method="POST" class="album-cart-form">
+
                             <button type="submit" class="btn btn-primary btn-cart">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <circle cx="9" cy="21" r="1"></circle>
@@ -108,6 +109,7 @@ if ($album && !empty($album['tracklist']) && is_array($album['tracklist'])) {
                                 </svg>
                                 Ajouter au panier
                             </button>
+                            
                         </form>
  
                     </div>

@@ -113,3 +113,36 @@ function logoutUser() {
     header("Location: /Track-Loader/");
     die();
 }
+
+function deleteUser() {
+    if (!isset($_SESSION['user']['id_user'])) {
+        notification('error', 'Utilisateur non connecté.');
+        http_response_code(303);
+        header('Location: /Track-Loader/pages/login.php');
+        exit;
+    }
+
+    $idUser = $_SESSION['user']['id_user'];
+
+    $result = deleteUserService($idUser);
+
+    if ($result['message'] === 'success') {
+        session_unset();
+        session_destroy();
+
+        if (isset($_COOKIE['token'])) {
+            unset($_COOKIE['token']);
+            setcookie('token', '', 1, '/');
+        }
+
+        notification('success', 'Compte supprimé.');
+        http_response_code(303);
+        header('Location: /Track-Loader/');
+        exit;
+    } else {
+        notification('error', 'Erreur lors de la suppression.');
+        http_response_code(500);
+        header('Location: /Track-Loader/');
+        exit;
+    }
+}

@@ -72,3 +72,16 @@ function getUserByEmailService($email) {
         return null;
     }
 }
+
+function deleteUserService($idUser) {
+    global $pdo;
+
+    $sql = "DELETE FROM user WHERE id_user = :id_user";
+    $stmt = $pdo->prepare($sql);
+
+    if ($stmt->execute(['id_user' => $idUser])) {
+        return ['message' => 'success'];
+    }
+
+    return ['message' => 'error'];
+}

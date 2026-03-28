@@ -32,6 +32,7 @@
 - `POST /api/user/login` — Connexion utilisateur
 - `POST /api/user/register` — Inscription utilisateur
 - `GET /api/user/logout` — Déconnexion
+- `GET /api/user/delete` — Suppression Compte (Suppression Cascade Active)
 
 ### Endpoints Panier
 
