@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
     <?php include 'include/notif.php'; ?>
 
     <body>
-        <!-- Hero Section -->
+
         <section class="hero">
             <div class="container">
                 <h1>Découvrez les meilleurs albums</h1>
@@ -28,7 +28,6 @@
             </div>
         </section>
 
-        <!-- Search Section -->
         <section class="search-section">
             <div class="container">
                 <form action="./pages/search.php" method="GET" class="search-box">
@@ -43,20 +42,17 @@
             </div>
         </section>
 
-        <!-- Featured Albums -->
         <section id="featured" class="featured-albums">
             <div class="container">
                 <h2>Albums en vedette</h2>
                 <div class="albums-grid">
 
                     <?php 
-
                         $albums = [];
                         $response = @file_get_contents(BASE_URL . '/api/albums/trending');
                         if ($response !== false) {
                             $albums = json_decode($response, true);
                         }
-
                     ?>
                     
                     <?php foreach ($albums as $album) : ?>

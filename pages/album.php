@@ -99,7 +99,7 @@ if ($album && !empty($album['tracklist']) && is_array($album['tracklist'])) {
                             <?= number_format($album['price'], 2) ?> €
                         </div>
  
-                        <form action="/Track-Loader/api/panier/<?= $album['id_album'] ?>" method="POST" class="album-cart-form">
+                        <form action="<?php echo BASE_URL . '/api/user/register/' . $album['id_album'] ?>" method="POST" class="album-cart-form">
                             <button type="submit" class="btn btn-primary btn-cart">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <circle cx="9" cy="21" r="1"></circle>
@@ -117,25 +117,37 @@ if ($album && !empty($album['tracklist']) && is_array($album['tracklist'])) {
         </div>
 
         <div class="container">
+
             <div class="tracklist-glass">
+
                 <div class="tracklist-header">
                     <span>Tracklist</span>
                     <span class="track-count"><?= count($tracklist) ?> pistes</span>
                 </div>
+
                 <?php foreach ($tracklist as $num => $title): ?>
+
                     <div class="track-item">
+
                         <span class="track-number"><?= $num ?></span>
+
                         <div class="track-dot">
                             <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
                                 stroke="rgba(255,255,255,0.3)" stroke-width="2">
                                 <circle cx="12" cy="12" r="4"/>
                             </svg>
                         </div>
+                        
                         <span class="track-title"><?= htmlspecialchars($title) ?></span>
+
                     </div>
+
                 <?php endforeach; ?>
+
             </div>
+
         </div>
+
     </section>
  
     

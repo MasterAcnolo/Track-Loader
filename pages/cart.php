@@ -70,23 +70,33 @@ if ($token) {
                 <div class="cart-grid">
 
                     <div class="cart-items">
+
                         <?php foreach ($cart_items as $item): ?>
+
                             <div class="cart-item">
+
                                 <img src="<?= htmlspecialchars($item['cover']) ?>"
                                     alt="<?= htmlspecialchars($item['name']) ?>"
                                     class="cart-item-cover">
+
                                 <div class="cart-item-info">
+
                                     <span class="cart-item-title"><?= htmlspecialchars($item['name']) ?></span>
                                     <span class="cart-item-artist"><?= htmlspecialchars($item['author_name']) ?></span>
                                     <span class="cart-item-price"><?= number_format($item['price'], 2) ?> €</span>
+
                                 </div>
-                                <form action="/Track-Loader/api/panier/<?= $item['id_album'] ?>" method="POST" class="cart-item-remove">
-                                    <input type="hidden" name="_method" value="DELETE">
+
+                                <form action="<?php echo BASE_URL . '/api/panier/' . $item['id_album'] ?>" method="POST" class="cart-item-remove">
+
+                                    <input type="hidden" name="_method" value="DELETE"> <!-- J'arrive pas avec Delete, Ducoup ya ça-->
+
                                     <button type="submit" class="btn-remove">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                             <polyline points="3 6 5 6 21 6"></polyline>
                                             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                         </svg>
+
                                     </button>
                                 </form>
                             </div>
@@ -94,20 +104,25 @@ if ($token) {
                     </div>
 
                     <div class="cart-summary">
+
                         <h3>Résumé</h3>
+
                         <div class="summary-row">
                             <span class="summary-label"><?= count($cart_items) ?> album(s)</span>
                             <span class="summary-value"><?= number_format($total, 2) ?> €</span>
                         </div>
+
                         <div class="summary-row total">
                             <span class="summary-label">Total</span>
                             <span class="summary-value"><?= number_format($total, 2) ?> €</span>
                         </div>
-                        <form action="/Track-Loader/api/panier/checkout" method="POST">
+
+                        <form action="<?php echo BASE_URL . '/api/panier/checkout' ?>" method="POST">
                             <button type="submit" class="btn btn-primary btn-block" style="width:100%; margin-top: 1rem;">
                                 Procéder au paiement
                             </button>
                         </form>
+
                     </div>
 
                 </div>

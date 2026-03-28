@@ -26,31 +26,48 @@
     </section>
 
     <section class="featured-albums">
+
         <div class="container">
+
             <?php if (empty($artists)): ?>
+
                 <div class="empty-state">
+
                     <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+
                         <circle cx="12" cy="12" r="10"></circle>
                         <line x1="12" y1="8" x2="12" y2="12"></line>
                         <line x1="12" y1="16" x2="12.01" y2="16"></line>
+
                     </svg>
+
                     <h3>Aucun artiste trouvé</h3>
                     <p>Aucun artiste disponible pour le moment.</p>
+
                 </div>
+
             <?php else: ?>
+
                 <div class="artists-grid">
+                    
                     <?php foreach ($artists as $artist): ?>
                         <?php $slug = strtolower(str_replace(' ', '-', htmlspecialchars($artist))); ?>
+
                         <a href="./artiste.php?artist=<?= urlencode($artist) ?>" class="artist-card artist-photo--<?= $slug ?>">
+                            
                             <div class="artist-card-overlay"></div>
                             <div class="artist-card-info">
                                 <h3 class="artist-card-name"><?= htmlspecialchars($artist) ?></h3>
                             </div>
+
                         </a>
                     <?php endforeach; ?>
                 </div>
+
             <?php endif; ?>
+
         </div>
+
     </section>
 
     <?php include '../include/footer.php'; ?>

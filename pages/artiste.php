@@ -55,24 +55,38 @@
                 </section>
 
                 <section class="featured-albums">
+
                     <div class="container">
+
                         <h2 class="section-title">Albums de <?= $artistLabel ?></h2>
                         <div class="albums-grid">
+
                             <?php foreach ($albums as $album) : ?>
+
                                 <a href="./album.php?id=<?= htmlspecialchars($album['id_album']) ?>" class="album-card">
+
                                     <img src="<?= htmlspecialchars($album['cover']) ?>" alt="<?= htmlspecialchars($album['name']) ?>" class="album-cover">
+
                                     <div class="album-info">
+                                        
                                         <h3 class="album-title"><?= htmlspecialchars($album['name']) ?></h3>
                                         <p class="album-artist"><?= htmlspecialchars($album['author_name']) ?></p>
                                         <div class="album-details">
+
                                             <span class="album-price"><?= htmlspecialchars($album['price']) ?> €</span>
                                             <span class="album-genre"><?= htmlspecialchars($album['style']) ?></span>
+
                                         </div>
                                     </div>
+                                    
                                 </a>
+
                             <?php endforeach; ?>
+                            
                         </div>
+
                     </div>
+
                 </section>
 
             <?php endif; ?>

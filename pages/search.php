@@ -71,19 +71,29 @@ if ($q !== '') {
                 <p style="margin-bottom: 1.5rem;"><?= count($results) ?> résultat(s) trouvé(s)</p>
 
                 <div class="albums-grid">
+
                     <?php foreach ($results as $album): ?>
+
                         <a href="./album.php?id=<?= $album['id_album'] ?>" class="album-card">
+
                             <img src="<?= htmlspecialchars($album['cover']) ?>" alt="<?= htmlspecialchars($album['name']) ?>" class="album-cover">
+
                             <div class="album-info">
+
                                 <h3 class="album-title"><?= htmlspecialchars($album['name']) ?></h3>
                                 <p class="album-artist"><?= htmlspecialchars($album['author_name']) ?></p>
+                                
                                 <div class="album-details">
                                     <span class="album-price"><?= number_format($album['price'], 2) ?> €</span>
                                     <span class="album-genre badge badge-primary"><?= htmlspecialchars($album['style']) ?></span>
                                 </div>
+
                             </div>
+
                         </a>
+
                     <?php endforeach; ?>
+
                 </div>
 
             <?php endif; ?>
