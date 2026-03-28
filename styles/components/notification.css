@@ -40,7 +40,6 @@
 }
 
 .notif-text { display: contents; }
-.notif-bar, .notif-bar-wrap { display: none !important; }
 
 @keyframes notif-in {
     from { opacity: 0; transform: translateX(10px); }

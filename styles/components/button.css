@@ -56,17 +56,6 @@
     opacity: 0.9;
 }
 
-.btn-ghost {
-    background-color: transparent;
-    color: var(--text-secondary);
-    border: none;
-}
-
-.btn-ghost:hover:not(:disabled) {
-    background-color: var(--bg-gray);
-    color: var(--text-primary);
-}
-
 .btn-small {
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
@@ -89,4 +78,32 @@
 
 .btn-group .btn {
     flex: 1;
+}
+
+.btn-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    align-self: center;
+}
+
+.btn-remove:hover {
+    background: var(--danger-color);
+    color: #fff;
+}
+
+.btn-cart {
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.05rem;
 }

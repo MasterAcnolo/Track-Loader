@@ -18,22 +18,3 @@
 .link-secondary:hover {
     color: var(--text-primary);
 }
-
-.link-danger {
-    color: var(--danger-color);
-    transition: color 0.2s;
-}
-
-.link-danger:hover {
-    color: var(--danger-hover);
-    text-decoration: underline;
-}
-
-.link-muted {
-    color: var(--text-muted);
-    font-size: 0.875rem;
-}
-
-.link-muted:hover {
-    color: var(--text-secondary);
-}
