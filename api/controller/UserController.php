@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../services/UserService.php';
 require_once __DIR__ . '/../helpers/helpers.php';
+require_once __DIR__ . '/../utils/TokenUtils.php';
 
 function createUser($config) {
     $email = trim($_POST['email'] ?? '');
@@ -16,7 +17,6 @@ function createUser($config) {
     $result = createUserService($email, $password);
 
     if($result['message'] === "success"){
-        require_once __DIR__ . '/../utils/TokenUtils.php';
         $token = createToken(['email' => $email, 'exp' => time() + 86400], $config);
         if($remember === "on"){
             setcookie("token", $token, time() + 3600, "/");

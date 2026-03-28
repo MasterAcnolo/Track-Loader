@@ -21,7 +21,7 @@
                         <p>Créez votre compte TrackLoader</p>
                     </div>
 
-                    <form action="/Track-Loader/api/user/register" method="POST" class="auth-form">
+                    <form action="<?php echo BASE_URL . '/api/user/register' ?>" method="POST" class="auth-form">
 
                         <div class="form-group">
                             <label for="email">Email</label>

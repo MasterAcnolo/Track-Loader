@@ -13,8 +13,7 @@
 
     <?php
         $artists = [];
-        $apiUrl   = 'http://localhost/Track-Loader/api/artist';
-        $response = @file_get_contents($apiUrl);
+        $response = @file_get_contents(BASE_URL . '/api/artist');
         if ($response !== false) {
             $artists = json_decode($response, true);
         }

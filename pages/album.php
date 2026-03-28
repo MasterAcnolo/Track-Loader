@@ -4,9 +4,8 @@ if (!isset($_GET['id'])) {
     $album = null;
 
 } else {
-    $albumId = (int)$_GET['id'];
-    $apiUrl = "http://localhost/Track-Loader/api/albums/$albumId";
-    $response = @file_get_contents($apiUrl); // @ pour éviter warning si 404
+    $albumId = (int) $_GET['id'];
+    $response = @file_get_contents(BASE_URL . "/api/albums/$albumId"); // @ pour éviter warning si 404
 
     if ($response === false) {
         $album = null;
@@ -28,7 +27,7 @@ if ($album && !empty($album['tracklist']) && is_array($album['tracklist'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $album ? htmlspecialchars($album['name']) : 'Album introuvable' ?> - TrackLoader</title>
+    <title><?= $album ? htmlspecialchars($album['name']) : 'Album introuvable' ?> - <?= $album ? htmlspecialchars($album['author_name']) : '' ?></title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/pages.css">
     <link rel="icon" type="image/webp" href="../assets/icon/icon.webp">
@@ -68,14 +67,18 @@ if ($album && !empty($album['tracklist']) && is_array($album['tracklist'])) {
 
                     <span><?= date('Y', strtotime($album['release_date'])) ?></span>
 
-                    <h2 class="album-detail-artist"><?= htmlspecialchars($album['author_name']) ?></h2>
+                    <h2 class="album-detail-artist">
+                        <a href="artiste.php?artist=<?= urlencode($album['author_name']) ?>">
+                            <?= htmlspecialchars($album['author_name']) ?>
+                        </a>
+                    </h2>
 
                     <span class="badge badge-primary album-genre"><?= htmlspecialchars($album['style']) ?></span>
 
                     <div class="album-actions-bottom">
 
                         <div class="album-price-large album-price-nomargin"><?= number_format($album['price'], 2) ?> €</div>
-                        <form action="/php/add-to-cart.php" method="POST" class="album-cart-form">
+                        <form action="TODO" method="POST" class="album-cart-form">
 
                             <input type="hidden" name="album_id" value="<?= $album['id_album'] ?>">
 

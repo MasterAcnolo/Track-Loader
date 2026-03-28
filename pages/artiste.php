@@ -17,8 +17,7 @@
 
         $albums = [];
         if ($artistName) {
-            $apiUrl   = 'http://localhost/Track-Loader/api/albums?artiste=' . urlencode($artistName);
-            $response = @file_get_contents($apiUrl);
+            $response = @file_get_contents(BASE_URL . '/api/albums?artiste=' . urlencode($artistName));
             if ($response !== false) {
                 $albums = json_decode($response, true);
             }

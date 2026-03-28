@@ -24,9 +24,8 @@
                 <?php
                 
                 $genres = [];
-                $apiUrl = 'http://localhost/Track-Loader/api/genres';
 
-                $response = @file_get_contents($apiUrl);
+                $response = @file_get_contents(BASE_URL . '/api/genres');
                 if ($response !== false) {
                     $genres = json_decode($response, true);
                 }

@@ -21,7 +21,7 @@
                         <p>Connectez-vous à votre compte TrackLoader</p>
                     </div>
 
-                    <form action="/Track-Loader/api/user/login" method="POST" class="auth-form">
+                    <form action="<?php echo BASE_URL . '/api/user/login' ?>" method="POST" class="auth-form">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" class="form-input" required>

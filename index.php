@@ -59,8 +59,7 @@
                     <?php 
 
                         $albums = [];
-                        $url = "http://localhost/Track-Loader/api/albums/trending";
-                        $response = @file_get_contents($url);
+                        $response = @file_get_contents(BASE_URL . '/api/albums/trending');
                         if ($response !== false) {
                             $albums = json_decode($response, true);
                         }

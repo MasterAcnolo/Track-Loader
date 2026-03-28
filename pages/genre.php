@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock - TrackLoader</title>
+    <title><?php echo $genre = isset($_GET['genre']) ? $_GET['genre'] : ''; ?> - TrackLoader</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/pages.css">
     <link rel="icon" type="image/webp" href="../assets/icon/icon.webp">
@@ -28,8 +28,7 @@
             <?php
             $albums = [];
             if ($genre) {
-                $apiUrl = 'http://localhost/Track-Loader/api/albums?genre=' . urlencode($genre);
-                $response = @file_get_contents($apiUrl);
+                $response = @file_get_contents(BASE_URL . '/api/albums?genre=' . urlencode($genre));
                 if ($response !== false) {
                     $albums = json_decode($response, true);
                 }
