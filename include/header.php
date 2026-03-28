@@ -11,10 +11,10 @@
                 <span>TrackLoader</span>
             </a>
 
-            <div class="search-bar">
-                <input type="text" placeholder="Rechercher un album, un artiste...">
+            <form action="/Track-Loader/pages/search.php" method="GET" class="search-bar">
+                <input type="text" name="q" placeholder="Rechercher un album, un artiste...">
                 <button type="submit">OK</button>
-            </div>
+            </form>
 
             <div class="header-actions">
                 <?php if(isset($_SESSION['user'])): ?>
