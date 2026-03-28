@@ -1,16 +1,16 @@
 <?php
-require_once __DIR__ . '/../init.php';
-require_once __DIR__ . '/../api/services/HistoriqueServices.php';
+    require_once __DIR__ . '/../init.php';
+    require_once __DIR__ . '/../api/services/HistoriqueServices.php';
 
-$user = $_SESSION['user'] ?? null;
-$purchases = [];
-$total_purchases = 0;
+    $user = $_SESSION['user'] ?? null;
+    $purchases = [];
+    $total_purchases = 0;
 
-if ($user) {
-    $purchases = getHistoriqueService($user['id_user']);
-    if (isset($purchases['error'])) $purchases = [];
-    $total_purchases = count($purchases);
-}
+    if ($user) {
+        $purchases = getHistoriqueService($user['id_user']);
+        if (isset($purchases['error'])) $purchases = [];
+        $total_purchases = count($purchases);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +30,7 @@ if ($user) {
     <section class="account-section">
         <div class="container">
 
+            <!-- Utilisateur Déconnecté -->
             <?php if (!$user): ?>
                 <div class="empty-state">
                     <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -97,26 +98,30 @@ if ($user) {
                         </div>
                     </div>
 
-                    <!-- Modifier l'email -->
+                    <!-- Contact -->
                     <div class="card">
+
                         <div class="card-header" style="gap: 0.75rem;">
+
                             <span style="display:flex;align-items:center;justify-content:center;background:var(--primary-color,#007bff);color:#fff;border-radius:50%;width:2.2em;height:2.2em;min-width:2.2em;">
+
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                    <path d="M21 8V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-1"></path>
+                                    <polyline points="17 8 21 12 17 16"></polyline>
+                                    <line x1="21" y1="12" x2="9" y2="12"></line>
                                 </svg>
+
                             </span>
-                            <h2 style="font-size:1.2em;line-height:1.2;">Modifier l'email</h2>
+
+                            <h2 style="font-size:1.2em;line-height:1.2;">Contact</h2>
+
                         </div>
+
                         <div class="card-body">
-                            <form action="/Track-Loader/api/user/update-email" method="POST">
-                                <div class="form-group">
-                                    <label for="new-email">Nouvel email</label>
-                                    <input type="email" id="new-email" name="email" class="form-input" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Mettre à jour l'email</button>
-                            </form>
+                            <p  style="margin-bottom: 2rem;">Une question ou besoin d'aide ?</p>
+                            <a href="mailto:support@trackloader.com" class="btn btn-primary">Nous contacter</a>
                         </div>
+
                     </div>
 
                     <!-- Modifier le mot de passe -->
