@@ -7,6 +7,7 @@ function createToken($data, $config) {
     return base64_encode($iv . $encrypted);
 }
 
+// Déchiffrer le token et récup le payload
 function verifyToken($token, $config) {
     $decoded = base64_decode($token);
     if (!$decoded) return false;
