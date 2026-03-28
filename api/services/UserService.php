@@ -34,7 +34,7 @@ function loginUserService($email, $password) {
 
     try {
         $stmt = $pdo->prepare("
-            SELECT email, password FROM user 
+            SELECT id_user, email, password FROM user 
             WHERE email = :email
         ");
 
@@ -56,5 +56,19 @@ function loginUserService($email, $password) {
 
     } catch (PDOException $e) {
         return ["error" => $e->getMessage()];
+    }
+}
+
+function getUserByEmailService($email) {
+    global $pdo;
+    try {
+        $stmt = $pdo->prepare("
+            SELECT id_user, email FROM user
+            WHERE email = :email
+        ");
+        $stmt->execute(['email' => $email]);
+        return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
+    } catch (PDOException $e) {
+        return null;
     }
 }

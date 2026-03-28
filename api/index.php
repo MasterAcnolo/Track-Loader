@@ -7,6 +7,10 @@ $fullPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $cleanPath = trim(str_replace('/Track-Loader/api', '', $fullPath), '/');
 $path = '/' . $cleanPath;
 
+if ($method === 'POST' && ($_POST['_method'] ?? '') === 'DELETE') {
+    $method = 'DELETE';
+}
+
 switch (true) {
     case $path === "/status":
         require __DIR__ . '/routes/StatusRoutes.php';
@@ -30,6 +34,14 @@ switch (true) {
 
     case str_starts_with($path, "/search"):
         require __DIR__ . '/routes/SearchRoutes.php';
+        exit;
+
+    case str_starts_with($path, "/panier"):
+        require __DIR__ . '/routes/PanierRoutes.php';
+        exit;
+
+    case str_starts_with($path, "/historique"):
+        require __DIR__ . '/routes/HistoriqueRoutes.php';
         exit;
 }
 

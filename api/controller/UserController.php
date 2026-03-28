@@ -16,25 +16,30 @@ function createUser($config) {
 
     $result = createUserService($email, $password);
 
-    if($result['message'] === "success"){
+    if ($result['message'] === "success") {
+        $user = getUserByEmailService($email);
         $token = createToken(['email' => $email, 'exp' => time() + 86400], $config);
-        if($remember === "on"){
+
+        if ($remember === "on") {
             setcookie("token", $token, time() + 3600, "/");
         } else {
             $_SESSION['token'] = $token;
         }
-        notification('success', 'Inscription réussie, bienvenue !');
 
+        $_SESSION['user'] = [
+            'id_user' => $user['id_user'],
+            'email'   => $email
+        ];
+
+        notification('success', 'Inscription réussie, bienvenue !');
         http_response_code(303);
         header("Location: /Track-Loader/");
         exit;
 
-    } elseif($result['message'] === "User already exists") {
-
+    } elseif ($result['message'] === "User already exists") {
         notification('error', 'Un compte existe déjà avec cet email.');
         http_response_code(303);
         header('Location: /Track-Loader/pages/register.php');
-
         exit;
     } else {
         notification('error', 'Erreur lors de l\'inscription.');
@@ -44,7 +49,7 @@ function createUser($config) {
     }
 }
 
-function loginUser($config){
+function loginUser($config) {
     $email = trim($_POST['email'] ?? '');
     $password = trim($_POST['password'] ?? '');
     $remember = trim($_POST['remember'] ?? '');
@@ -53,22 +58,29 @@ function loginUser($config){
         sendJson(400, ["error" => "Email invalide ou inexistant"]);
         exit;
     }
+
     if (strlen($password) < 8) {
         sendJson(400, ["error" => "Mot de passe trop court"]);
-        notification("error","Mot de passe trop court");
+        notification("error", "Mot de passe trop court");
         exit;
     }
 
     $result = loginUserService($email, $password);
 
-    if($result['message'] === "success"){
-        require_once __DIR__ . '/../utils/TokenUtils.php';
+    if ($result['message'] === "success") {
         $token = createToken(['email' => $email, 'exp' => time() + 86400], $config);
-        if($remember === "on"){
+
+        if ($remember === "on") {
             setcookie("token", $token, time() + 3600, "/");
         } else {
             $_SESSION['token'] = $token;
         }
+
+        $_SESSION['user'] = [
+            'id_user' => $result['user']['id_user'],
+            'email'   => $email
+        ];
+
         notification('success', 'Connexion réussie !');
         http_response_code(303);
         header("Location: /Track-Loader/");
@@ -81,24 +93,23 @@ function loginUser($config){
     }
 }
 
-function logoutUser(){
+function logoutUser() {
     setcookie('logout_notif', json_encode([
-        'type' => 'success',
+        'type'    => 'success',
         'message' => 'Déconnexion réussie.'
     ]), time() + 60, '/');
 
-    if (session_status() === PHP_SESSION_ACTIVE){
+    if (session_status() === PHP_SESSION_ACTIVE) {
         session_unset();
         session_destroy();
-    };
+    }
 
-    if (isset($_COOKIE['token'])){
-        unset($_COOKIE['token']); 
-        setcookie('token', '', 1, '/'); 
-    };
+    if (isset($_COOKIE['token'])) {
+        unset($_COOKIE['token']);
+        setcookie('token', '', 1, '/');
+    }
 
     http_response_code(303);
     header("Location: /Track-Loader/");
     die();
-
 }
