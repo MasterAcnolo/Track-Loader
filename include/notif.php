@@ -9,7 +9,7 @@ if (isset($_SESSION['flash'])) {
 ?>
 <?php if (!empty($notif)): ?>
 <div class="notification <?= $notif['type'] ?>">
-    <div class="notif-icon"><?= $notif['type'] === 'success' ? '✓' : '!' ?></div>
+    <div class="notif-icon"></div>
     <div class="notif-text">
         <p class="notif-title"><?= htmlspecialchars($notif['message']) ?></p>
         <div class="notif-bar-wrap"><div class="notif-bar"></div></div>

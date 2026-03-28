@@ -2,62 +2,51 @@
     position: fixed;
     top: 15vh;
     right: 1.5rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-    min-width: 280px;
-    max-width: 340px;
-    padding: 13px 16px;
+    gap: 8px;
+    padding: 10px 14px;
     border-radius: 8px;
-    background: #fff;
-    border: 0.5px solid rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    color: #1a1a1a;
     z-index: 9999;
-    animation: slideIn 0.2s ease, fadeOut 0.3s ease 4s forwards;
+    animation: notif-in 0.25s cubic-bezier(0.16,1,0.3,1), notif-out 0.3s 3.7s forwards;
 }
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(-4px); }
-    to   { opacity: 1; transform: translateY(0); }
+
+.notification.success {
+    background: #1a2e1f;
+    border: 1px solid rgba(34,197,94,0.25);
 }
-@keyframes fadeOut {
-    to { opacity: 0; visibility: hidden; }
+
+.notification.error {
+    background: #2a1a1a;
+    border: 1px solid rgba(239,68,68,0.25);
 }
-.notification .notif-icon {
-    width: 22px;
-    height: 22px;
+
+.notif-icon {
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
-    font-size: 12px;
+}
+
+.notification.success .notif-icon { background: var(--success-color); }
+.notification.error   .notif-icon { background: var(--danger-color); }
+
+.notif-title {
+    display: block !important;
+    font-size: 13px;
     font-weight: 500;
+    color: var(--text-white);
+    white-space: nowrap;
 }
-.notification.success .notif-icon { background: #EAF3DE; color: #3B6D11; }
-.notification.error   .notif-icon { background: #FCEBEB; color: #A32D2D; }
-.notification .notif-text { flex: 1; }
-.notification .notif-title {
-    font-weight: 500;
-    font-size: 13.5px;
-    margin: 0;
+
+.notif-text { display: contents; }
+.notif-bar, .notif-bar-wrap { display: none !important; }
+
+@keyframes notif-in {
+    from { opacity: 0; transform: translateX(10px); }
+    to   { opacity: 1; transform: translateX(0); }
 }
-.notification .notif-bar-wrap {
-    height: 2px;
-    background: rgba(0, 0, 0, 0.08);
-    border-radius: 2px;
-    margin-top: 8px;
-    overflow: hidden;
-}
-.notification .notif-bar {
-    height: 100%;
-    width: 100%;
-    border-radius: 2px;
-    animation: shrink 4s linear forwards;
-}
-.notification.success .notif-bar { background: #639922; }
-.notification.error   .notif-bar { background: #E24B4A; }
-@keyframes shrink {
-    from { width: 100%; }
-    to   { width: 0%; }
+
+@keyframes notif-out {
+    to { opacity: 0; visibility: hidden; }
 }
