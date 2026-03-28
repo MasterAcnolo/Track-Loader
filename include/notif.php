@@ -12,7 +12,6 @@ if (isset($_SESSION['flash'])) {
     <div class="notif-icon"></div>
     <div class="notif-text">
         <p class="notif-title"><?= htmlspecialchars($notif['message']) ?></p>
-        <div class="notif-bar-wrap"><div class="notif-bar"></div></div>
     </div>
 </div>
 <?php endif; ?>
