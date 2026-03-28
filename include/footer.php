@@ -20,8 +20,8 @@
                 <ul>
                     <li><a href="/Track-Loader/index.php">Accueil</a></li>
                     <li><a href="/Track-Loader/pages/genres.php">Genres</a></li>
+                    <li><a href="/Track-Loader/pages/artistes.php">Artistes</a></li>
                     <li><a href="/Track-Loader/pages/cart.php">Panier</a></li>
-                    <li><a href="/Track-Loader/pages/account.php">Mon Compte</a></li>
                 </ul>
             </div>
 
@@ -29,9 +29,8 @@
             <div class="footer-section">
                 <h3>Support</h3>
                 <ul>
-                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="/Track-Loader/pages/account.php">Mon Compte</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">FAQ</a></li>
                     <li><a href="#">Conditions d'utilisation</a></li>
                 </ul>
             </div>
