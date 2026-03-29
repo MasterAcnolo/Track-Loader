@@ -1,7 +1,23 @@
 .auth-section {
     padding: 4rem 0;
     min-height: calc(100vh - 400px);
-    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    background: url("../../assets/login.jpg");
+    background-position: right;
+    background-size: cover;
+}
+
+.auth-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+}
+
+.auth-section > * {
+    position: relative;
+    z-index: 2;
 }
 
 .auth-container {
