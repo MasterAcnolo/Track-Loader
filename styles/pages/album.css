@@ -1,13 +1,5 @@
-
-.album-hero {
-    position: relative;
-    overflow: hidden;
-    padding: 4rem 0 3rem;
-    min-height: 420px;
-}
-
 .album-hero-bg {
-    position: absolute;
+    position: absolute; 
     inset: 0;
     background-size: cover;
     background-position: center;
@@ -148,7 +140,6 @@
     border-radius: 16px;
     overflow: hidden;
     margin-top: 2.5rem;
-    margin-bottom: 3rem;
 }
 
 .tracklist-header {
@@ -172,6 +163,30 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
+.artist-albums-section {
+    padding: 3rem 0 4rem;
+    position: relative;
+    z-index: 4;
+}
+
+.artist-albums-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.75rem;
+    color: var(--text-primary, #fff);
+}
+
+.artist-albums-title a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255,255,255,0.25);
+    transition: border-color 0.2s;
+}
+
+.artist-albums-title a:hover {
+    border-color: rgba(255,255,255,0.8);
+}
+
 @media (max-width: 768px) {
     .album-hero { padding: 2rem 0; }
 
@@ -188,7 +203,6 @@
         align-self: center;
     }
 
-    /* ← tout ce bloc est nouveau */
     .album-detail-info {
         width: 100%;
         text-align: center;
@@ -207,7 +221,7 @@
     }
 
     .album-actions-bottom {
-        flex-direction: row;        /* ← prix + bouton côte à côte */
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
