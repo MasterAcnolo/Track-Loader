@@ -57,9 +57,82 @@
     gap: 2rem;
 }
 
+.eyebrow {
+    font-size: 0.72rem; 
+    text-transform: uppercase; 
+    letter-spacing: 0.12em;
+    color: var(--primary-color); 
+    font-weight: 600; 
+    margin: 0 0 0.35rem;
+}
+
+
+.section-head {
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: space-between;
+    margin-bottom: 2rem; 
+    flex-wrap: wrap; 
+    gap: 0.75rem;
+}
+
+.cta-section { 
+    padding: 5rem 0; 
+    background: var(--bg-gray); 
+}
+
+.cta-inner {
+    position: relative; 
+    overflow: hidden;
+    background: var(--bg-dark); 
+    border: 1px solid var(--border-color);
+    border-radius: 20px; 
+    padding: 4rem 2rem; 
+    text-align: center;
+}
+
+.cta-glow {
+    position: absolute; 
+    width: 500px; 
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(29,185,84,.18) 0%, transparent 70%);
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+.cta-inner h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800; 
+    margin: .3rem 0 1rem; 
+    position: relative;
+}
+
+.cta-sub {
+    font-size: .95rem; 
+    color: var(--text-secondary); 
+    max-width: 480px;
+    margin: 0 auto 2rem; 
+    line-height: 1.65; 
+    position: relative;
+}
+
+.cta-btns { 
+    display: flex; 
+    gap: 1rem; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    position: relative; 
+}
+
 @media (max-width: 768px) {
     .albums-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 1rem;
     }
+}
+
+@media (max-width: 480px) {
+    .section-head { flex-direction: column; align-items: flex-start; }
 }

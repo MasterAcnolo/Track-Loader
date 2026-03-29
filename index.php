@@ -44,7 +44,12 @@
 
         <section id="featured" class="featured-albums">
             <div class="container">
-                <h2>Albums en vedette</h2>
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Sélection de la semaine</p>
+                        <h2 class="sec-title">Albums en vedette</h2>
+                    </div>
+                </div>
                 <div class="albums-grid">
 
                     <?php 
@@ -77,6 +82,21 @@
                         </a>
 
                     <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-inner">
+                    <div class="cta-glow"></div>
+                    <p class="eyebrow" style="color:var(--primary-color)">Prêt à plonger ?</p>
+                    <h2>Des milliers de sons vous attendent</h2>
+                    <p class="cta-sub">Rejoignez la communauté Track Loader et explorez un catalogue musical sans limites, sans abonnement.</p>
+                    <div class="cta-btns">
+                        <a href="./pages/register.php" class="btn btn-primary btn-lg">Créer un compte gratuit</a>
+                        <a href="./pages/genres.php"   class="btn btn-outline btn-lg">Parcourir sans compte</a>
+                    </div>
                 </div>
             </div>
         </section>
