@@ -146,3 +146,50 @@ function deleteUser() {
         exit;
     }
 }
+function changePassword($config) {
+    if (!isset($_SESSION['user']['id_user'])) {
+        notification('error', 'Utilisateur non connecté.');
+        header('Location: /Track-Loader/pages/account.php');
+        exit;
+    }
+
+    $idUser = $_SESSION['user']['id_user'];
+    $currentPassword = trim($_POST['current_password'] ?? '');
+    $newPassword = trim($_POST['new_password'] ?? '');
+    $confirmPassword = trim($_POST['confirm_password'] ?? '');
+
+    if (!$currentPassword || !$newPassword || !$confirmPassword) {
+        notification('error', 'Tous les champs sont obligatoires');
+        header('Location: /Track-Loader/pages/account.php');
+        exit;
+    }
+
+    if (strlen($newPassword) < 8) {
+        notification('error', 'Le nouveau mot de passe doit contenir au moins 8 caractères');
+        header('Location: /Track-Loader/pages/account.php');
+        exit;
+    }
+
+    if ($newPassword !== $confirmPassword) {
+        notification('error', 'Les mots de passe ne correspondent pas');
+        header('Location: /Track-Loader/pages/account.php');
+        exit;
+    }
+
+    $result = verifyUserPasswordService($idUser, $currentPassword);
+    if ($result['message'] !== 'success') {
+        notification('error', 'Ancien mot de passe incorrect');
+        header('Location: /Track-Loader/pages/account.php');
+        exit;
+    }
+
+    $update = updateUserPasswordService($idUser, $newPassword);
+    if ($update['message'] === 'success') {
+        notification('success', 'Mot de passe modifié avec succès');
+    } else {
+        notification('error', 'Erreur lors de la modification du mot de passe');
+    }
+
+    header('Location: /Track-Loader/pages/account.php');
+    exit;
+}

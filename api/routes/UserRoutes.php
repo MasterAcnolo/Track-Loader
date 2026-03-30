@@ -23,6 +23,14 @@ switch ($path) {
         }
         break;
 
+
+    case "/user/password":
+        if ($method === "POST") {
+            changePassword($config);
+            break;
+        }
+        break;
+
     case "/user/delete":
         if ($method === "DELETE") {
             deleteUser();

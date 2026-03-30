@@ -85,3 +85,35 @@ function deleteUserService($idUser) {
 
     return ['message' => 'error'];
 }
+
+function verifyUserPasswordService($idUser, $password) {
+    global $pdo;
+    try {
+        $stmt = $pdo->prepare("SELECT password FROM user WHERE id_user = :id_user");
+        $stmt->execute(['id_user' => $idUser]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        if (!$user) {
+            return ['message' => 'user_not_found'];
+        }
+        if (!password_verify($password, $user['password'])) {
+            return ['message' => 'invalid_password'];
+        }
+        return ['message' => 'success'];
+    } catch (PDOException $e) {
+        return ['error' => $e->getMessage()];
+    }
+}
+
+function updateUserPasswordService($idUser, $newPassword) {
+    global $pdo;
+    try {
+        $stmt = $pdo->prepare("UPDATE user SET password = :password WHERE id_user = :id_user");
+        $stmt->execute([
+            'password' => password_hash($newPassword, PASSWORD_DEFAULT),
+            'id_user' => $idUser
+        ]);
+        return ['message' => 'success'];
+    } catch (PDOException $e) {
+        return ['error' => $e->getMessage()];
+    }
+}

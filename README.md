@@ -31,6 +31,7 @@
 
 - `POST /api/user/login` — Connexion utilisateur
 - `POST /api/user/register` — Inscription utilisateur
+- `POST /api/user/password` — Modification Mot De Passe
 - `GET /api/user/logout` — Déconnexion
 - `GET /api/user/delete` — Suppression Compte (Suppression Cascade Active)
 

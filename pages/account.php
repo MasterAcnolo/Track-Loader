@@ -136,7 +136,7 @@
                             <h2 style="font-size:1.2em;line-height:1.2;">Modifier le mot de passe</h2>
                         </div>
                         <div class="card-body">
-                            <form action="/Track-Loader/api/user/update-password" method="POST" autocomplete="off">
+                            <form id="password-form" action="/Track-Loader/api/user/password" method="POST" autocomplete="off">
                                 <div class="form-group">
                                     <label for="current-password">Mot de passe actuel</label>
                                     <input type="password" id="current-password" name="current_password" class="form-input" required autocomplete="current-password">
