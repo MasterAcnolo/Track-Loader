@@ -78,26 +78,6 @@ input[type="radio"] {
     color: var(--text-secondary);
 }
 
-.form-error {
-    border-color: var(--danger-color);
-}
-
-.form-error:focus {
-    border-color: var(--danger-color);
-    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
-}
-
-.error-message {
-    display: block;
-    margin-top: 0.25rem;
-    font-size: 0.75rem;
-    color: var(--danger-color);
-}
-
-.form-success {
-    border-color: var(--success-color);
-}
-
 .form-options {
     display: flex;
     justify-content: space-between;

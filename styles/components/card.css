@@ -34,15 +34,6 @@
     background-color: var(--bg-gray);
 }
 
-.card-static {
-    transform: none;
-}
-
-.card-static:hover {
-    transform: none;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-}
-
 .album-card {
     background-color: var(--bg-white);
     border-radius: 0.5rem;
