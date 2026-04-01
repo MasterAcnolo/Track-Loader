@@ -14,7 +14,12 @@
     <section class="page-header">
         <div class="container">
             <h1>Genres Musicaux</h1>
-            <p>Explorez nos albums par genre musical</p>
+            <p><a href="./genres.php" class="link-secondary" style="display:inline-flex;align-items:center;gap:0.4em;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                Retour a l'accueil
+            </a></p>
         </div>
     </section>
 
