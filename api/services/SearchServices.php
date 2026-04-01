@@ -1,7 +1,6 @@
 <?php
 require_once __DIR__ . '/../config/database.php';
 
-// Recherche globale sur nom ou artiste
 function searchAlbumsByNameOrArtist($query) {
     global $pdo;
     try {

@@ -7,7 +7,7 @@ require_once __DIR__ . '/../helpers/helpers.php';
 function getAlbums() {
 
     $allowed = ['genre', 'annee', 'artiste', 'name'];
-    $unknown = array_diff(array_keys($_GET), $allowed);
+    $unknown = array_diff(array_keys($_GET), $allowed); // Unknown contient tous les params non autorisé. Array_keys c'est pour récupérer touts les paramètresreçu dans l'URL.
     if (count($unknown) > 0) {
         sendJson(400, ["error" => "Bad Request : " . implode(', ', $unknown)]);
         return;
