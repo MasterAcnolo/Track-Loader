@@ -103,10 +103,12 @@
     display: flex;
     align-items: center;
     height: 40px;
-    padding: 0 0.75rem;
     border-radius: 6px;
     transition: all 0.2s ease;
     text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .header-actions a:hover {
@@ -131,7 +133,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1090px) {
+@media (max-width: 1140px) {
     .header-content {
         flex-wrap: wrap;
         gap: 0.75rem;
@@ -158,8 +160,22 @@
         padding: 0 0.4rem;
     }
 
-    .header-actions a[href*="account"] {
-        text-overflow: ellipsis;
-        white-space: nowrap;
+@media (max-width: 700px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
     }
+    .search-bar {
+        width: 100%;
+        min-width: 0;
+    }
+    .header-actions {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+    .header-actions a {
+        font-size: 0.95em;
+    }
+}
 }
