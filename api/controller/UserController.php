@@ -8,7 +8,17 @@ function createUser($config) {
     $password = trim($_POST['password'] ?? '');
     $remember = trim($_POST['remember'] ?? '');
 
-    if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($password) < 8) {
+    // Limites de longueur
+    $MAX_EMAIL_LENGTH = 255;
+    $MAX_PASSWORD_LENGTH = 128;
+
+    if (
+        !$email ||
+        !filter_var($email, FILTER_VALIDATE_EMAIL) ||
+        strlen($email) > $MAX_EMAIL_LENGTH ||
+        strlen($password) < 8 ||
+        strlen($password) > $MAX_PASSWORD_LENGTH
+    ) {
         sendJson(400, ["error" => "Invalid Credentials"]);
         notification('error', 'Invalid Credentials');
         exit;
@@ -54,14 +64,22 @@ function loginUser($config) {
     $password = trim($_POST['password'] ?? '');
     $remember = trim($_POST['remember'] ?? '');
 
-    if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $MAX_EMAIL_LENGTH = 255;
+    $MAX_PASSWORD_LENGTH = 128;
+
+    if (
+        !$email ||
+        !filter_var($email, FILTER_VALIDATE_EMAIL) ||
+        strlen($email) > $MAX_EMAIL_LENGTH
+    ) {
         sendJson(400, ["error" => "Email invalide ou inexistant"]);
+        notification('error', 'Email invalide ou inexistant');
         exit;
     }
 
-    if (strlen($password) < 8) {
-        sendJson(400, ["error" => "Mot de passe trop court"]);
-        notification("error", "Mot de passe trop court");
+    if (strlen($password) < 8 || strlen($password) > $MAX_PASSWORD_LENGTH) {
+        sendJson(400, ["error" => "Mot de passe invalide"]);
+        notification("error", "Mot de passe invalide");
         exit;
     }
 
