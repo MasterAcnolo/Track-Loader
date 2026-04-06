@@ -11,20 +11,20 @@ DROP TABLE IF EXISTS album;
 -- Recréation des tables
 CREATE TABLE album (
     id_album INT AUTO_INCREMENT,
-    name VARCHAR(50),
+    name VARCHAR(255),
     cover VARCHAR(255),
     style VARCHAR(50),
     tracklist TEXT,
     release_date DATE,
     price INT,
-    author_name VARCHAR(50),
+    author_name VARCHAR(255),
     author_image_url VARCHAR(255),
     PRIMARY KEY(id_album)
 );
 
 CREATE TABLE user (
     id_user INT AUTO_INCREMENT,
-    email VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY(id_user)
 );
