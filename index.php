@@ -91,7 +91,7 @@
                 <div class="cta-inner">
                     <div class="cta-glow"></div>
                     <p class="eyebrow" style="color:var(--primary-color)">Prêt à plonger ?</p>
-                    <h2>Des milliers de sons vous attendent</h2>
+                    <h2>Des milliards de sons vous attendent</h2>
                     <p class="cta-sub">Rejoignez la communauté Track Loader et explorez un catalogue musical sans limites, sans abonnement.</p>
                     <div class="cta-btns">
                         <a href="./pages/register.php" class="btn btn-primary btn-lg">Créer un compte gratuit</a>
