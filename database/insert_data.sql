@@ -6,7 +6,7 @@ VALUES
 --  LINKIN PARK  |  Rock-Alternatif
 -- ============================================================
 
--- 1. Hybrid Theory (2000) — MBID release : 5fc6445c-05ce-34e7-ab31-63bf7d3a9f24
+-- 1. Hybrid Theory (2000)
 (
   'Hybrid Theory',
   'https://cdn-images.dzcdn.net/images/cover/033a271b5ec10842c287827c39244fb5/0x1900-000000-80-0-0.jpg',
@@ -18,7 +18,7 @@ VALUES
   'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
--- 2. Meteora (2003) — MBID release : 42888e58-7b4b-4626-a04a-a3e9c2e5e68c
+-- 2. Meteora (2003)
 (
   'Meteora',
   'https://m.media-amazon.com/images/I/81SnDmLBHQL.jpg',
@@ -30,7 +30,7 @@ VALUES
   'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
--- 3. Minutes to Midnight (2007) — MBID release : 127e18cd-3e5c-4308-9345-e1a8297a2ff5
+-- 3. Minutes to Midnight (2007)
 (
   'Minutes to Midnight',
   'https://i.redd.it/e1r808iuuypd1.jpeg',
@@ -42,7 +42,7 @@ VALUES
   'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
--- 4. A Thousand Suns (2010) — MBID release : 95b05941-e98f-477e-a81c-3bcdd7c6ad71
+-- 4. A Thousand Suns (2010)
 (
   'A Thousand Suns',
   'https://m.media-amazon.com/images/I/81Z8E8G1OEL.jpg',
@@ -54,7 +54,7 @@ VALUES
   'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
--- 5. Living Things (2012) — MBID release : 658b008f-6f56-48e4-9363-8de9e3c5d4d3
+-- 5. Living Things (2012)
 (
   'Living Things',
   'https://i.redd.it/2ru16onv7pff1.jpeg',
@@ -66,7 +66,7 @@ VALUES
   'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
--- 6. The Hunting Party (2014) — MBID release : cf1c9b8d-aaff-4b46-b730-59f5fcc3daa8
+-- 6. The Hunting Party (2014)
 (
   'The Hunting Party',
   'https://linkinpedia.com/w/images/thumb/1/13/Studio-The_Hunting_Party_cover.jpg/1200px-Studio-The_Hunting_Party_cover.jpg',
@@ -78,7 +78,7 @@ VALUES
   'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
--- 7. One More Light (2017) — MBID release : b85e7ce4-3805-414e-af40-4e8d60cc7007
+-- 7. One More Light (2017)
 (
   'One More Light',
   'https://i.redd.it/k4cmj7cexqqf1.jpeg',
@@ -90,7 +90,7 @@ VALUES
   'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
 ),
 
--- 8. From Zero (2024) — MBID release : 1122464e-d7e3-4a11-9a9f-c3f3568f2e76
+-- 8. From Zero (2024)
 (
   'From Zero',
   'https://groundzero.fr/wp-content/uploads/2024/09/Linkin_Park_-_From_Zero.jpeg',
@@ -154,7 +154,7 @@ VALUES
 --  NF  |  Hip-Hop
 -- ============================================================
 
--- 9. Mansion (2015) — MBID release : 8db1bc0d-2d76-428b-8c0a-b4e71c98a033
+-- 9. Mansion (2015)
 (
   'Mansion',
   'https://m.media-amazon.com/images/I/71o6fTQjpcL._UF894,1000_QL80_.jpg',
@@ -166,7 +166,7 @@ VALUES
   'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
--- 10. Therapy Session (2016) — MBID release : 3f2b91e2-1c0d-4b3e-9b3e-2f1e3c5d4e5f
+-- 10. Therapy Session (2016)
 (
   'Therapy Session',
   'https://m.media-amazon.com/images/I/91DAMdLVM2L._UF1000,1000_QL80_.jpg',
@@ -178,7 +178,7 @@ VALUES
   'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
--- 11. Perception (2017) — MBID release : a1b2c3d4-e5f6-7890-abcd-ef1234567890
+-- 11. Perception (2017)
 (
   'Perception',
   'https://m.media-amazon.com/images/I/713VZ3I1O-L._UF894,1000_QL80_.jpg',
@@ -190,7 +190,7 @@ VALUES
   'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
--- 12. The Search (2019) — MBID release : b2c3d4e5-f6a7-8901-bcde-f12345678901
+-- 12. The Search (2019)
 (
   'The Search',
   'https://media.pitchfork.com/photos/5d4864ac04c06a00092f65da/master/pass/NF_TheSearch.jpg',
@@ -202,7 +202,7 @@ VALUES
   'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
--- 13. CLOUDS (THE MIXTAPE) (2021) — MBID release : c3d4e5f6-a7b8-9012-cdef-123456789012
+-- 13. CLOUDS (THE MIXTAPE) (2021)
 (
   'CLOUDS (THE MIXTAPE)',
   'https://m.media-amazon.com/images/I/610fVAc+f2L.jpg',
@@ -214,7 +214,7 @@ VALUES
   'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
--- 14. HOPE (2023) — MBID release : d4e5f6a7-b8c9-0123-defa-234567890123
+-- 14. HOPE (2023)
 (
   'HOPE',
   'https://static.fnac-static.com/multimedia/Images/FR/NR/db/82/e7/15172315/1540-1/tsp20230620161439/Hope.jpg',
@@ -226,7 +226,7 @@ VALUES
   'https://cdn.localspins.com/wp-content/uploads/2017/05/01151440/NF1.jpg'
 ),
 
--- 15. FEAR (2025) — MBID release : e5f6a7b8-c9d0-1234-efab-345678901234
+-- 15. FEAR (2025)
 (
   'FEAR',
   'https://cdn-images.dzcdn.net/images/cover/235dda4eca7980c712553e847d49459a/500x500.jpg',
@@ -242,7 +242,7 @@ VALUES
 --  EMINEM  |  Hip-Hop
 -- ============================================================
 
--- 16. The Slim Shady LP (1999) — MBID release : fd82c0c8-1b4e-3e4a-a8c2-1e3f5c7d9e0a
+-- 16. The Slim Shady LP (1999)
 (
   'The Slim Shady LP',
   'https://m.media-amazon.com/images/I/81Ahe2x9qBL.jpg',
@@ -254,7 +254,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 17. The Marshall Mathers LP (2000) — MBID release : d99e995e-3726-4c6b-90ab-b9b0b8c3e3a0
+-- 17. The Marshall Mathers LP (2000)
 (
   'The Marshall Mathers LP',
   'https://static.fnac-static.com/multimedia/Images/FR/NR/6b/bf/10/1097579/1507-1/tsp20230712131243/The-Marshall-Mathers-LP.jpg',
@@ -266,7 +266,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 18. The Eminem Show (2002) — MBID release : 40a7080b-40e4-3b24-847a-d21aaee5f414
+-- 18. The Eminem Show (2002)
 (
   'The Eminem Show',
   'https://m.media-amazon.com/images/I/71n0xmxpw7L.jpg',
@@ -278,7 +278,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 19. Encore (2004) — MBID release : c71fe58f-7a71-31a8-a41b-7e7351360992
+-- 19. Encore (2004)
 (
   'Encore',
   'https://m.media-amazon.com/images/I/61iN2uEt2ML.jpg',
@@ -290,7 +290,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 20. Relapse (2009) — MBID release : 88a856de-d5d1-4225-9612-8858b2f5353f
+-- 20. Relapse (2009)
 (
   'Relapse',
   'https://cdn-images.dzcdn.net/images/cover/bd571081cf7d4ee6fe9e5904423b76cb/1900x1900-000000-80-0-0.jpg',
@@ -302,7 +302,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 21. Recovery (2010) — MBID release : dddf01df-f9f1-4ba6-b414-5ddf1984fc7f
+-- 21. Recovery (2010)
 (
   'Recovery',
   'https://cdn-images.dzcdn.net/images/cover/be682506145061814eddee648edb7c59/0x1900-000000-80-0-0.jpg',
@@ -314,7 +314,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 22. The Marshall Mathers LP 2 (2013) — MBID release : 68b762a7-9db0-48a6-9817-9643110db99d
+-- 22. The Marshall Mathers LP 2 (2013)
 (
   'The Marshall Mathers LP 2',
   'https://m.media-amazon.com/images/I/91E0tsoLNrL.jpg',
@@ -326,7 +326,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 23. Revival (2017) — MBID release : f7a8b9c0-d1e2-3456-fabc-456789012345
+-- 23. Revival (2017)
 (
   'Revival',
   'https://static.fnac-static.com/multimedia/Images/FR/NR/13/1f/81/8462099/1540-1/tsp20171208102200/Revival.jpg',
@@ -338,7 +338,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 24. Kamikaze (2018) — MBID release : bb764832-4e78-4967-aa05-9db5638f8283
+-- 24. Kamikaze (2018)
 (
   'Kamikaze',
   'https://m.media-amazon.com/images/I/91AMfe72gCL._UF894,1000_QL80_.jpg',
@@ -350,7 +350,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 25. Music to Be Murdered By (2020) — MBID release : a8b9c0d1-e2f3-4567-abcd-567890123456
+-- 25. Music to Be Murdered By (2020)
 (
   'Music to Be Murdered By',
   'https://m.media-amazon.com/images/I/91EMDOSuZVL.jpg',
@@ -362,7 +362,7 @@ VALUES
   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/960px-Eminem_2021_Color_Corrected.jpg'
 ),
 
--- 26. The Death of Slim Shady (Coup de Grâce) (2024) — MBID release : b9c0d1e2-f3a4-5678-bcde-678901234567
+-- 26. The Death of Slim Shady (Coup de Grâce) (2024)
 (
   'The Death of Slim Shady (Coup de Grâce)',
   'https://m.media-amazon.com/images/I/81aMOa9KUQL._UF1000,1000_QL80_.jpg',
