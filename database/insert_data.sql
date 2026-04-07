@@ -102,6 +102,54 @@ VALUES
   'https://bocir-medias-prod.s3.fr-par.scw.cloud/medias/6cOIUcKx8a/image/linkin_park1725613312157-format1by1.png'
 ),
 
+-- 9. Reanimation (2002)
+(
+  'Reanimation',
+  'https://cdn-images.dzcdn.net/images/cover/bb1af174c25e0a1b95f456d253c4ff3d/0x1900-000000-80-0-0.jpg',
+  'Rock-Alternatif',
+  '["Opening","Pts.Of.Athrty","Enth E Nd","[Chali]", "Frgt/10", "P5hng Me A*wy", "Plc.4 Mie Haed", "X-Ecutioner Style", "Hi! Vltg3","[Riff Raff]", "Wth > You", "Ntr/mission", "Ppr:kut", "Rnw@y", "My<Dsmbr", "[Stef]", "By_Myslf", "Kyur4 Th Ich", "1Stp Klosr", "Krwling"]',
+  '2002-07-30',
+  20,
+  'Linkin Park',
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
+),
+
+-- 10. Meteora (20th Anniversary Edition) (2023)
+(
+  'Meteora (20th Anniversary Edition)',
+  'https://www.rollingstone.fr/wp-content/uploads/2023/02/linkin-park-meteora.jpg',
+  'Rock-Alternatif',
+  '["Foreword","Don''t Stay","Somewhere I Belong","Lying From You","Hit The Floor","Easier To Run","Faint","Figure.09","Breaking The Habit","From The Inside","Nobody''s Listening","Session","Numb","Don''t Stay (Live In Texas)","Somewhere I Belong (Live In Texas)","Lying From You (Live In Texas)","Papercut (Live In Texas)","Points Of Authority (Live In Texas)","Runaway (Live In Texas)","Faint (Live In Texas)","From The Inside (Live In Texas)","Figure.09 (Live In Texas)","With You (Live In Texas)","By Myself (Live In Texas)","P5hng Me A*Wy (Live In Texas)","Numb (Live In Texas)","Crawling (Live In Texas)","In The End (Live In Texas)","A Place For My Head (Live In Texas)","One Step Closer (Live In Texas)","Session (Live In Nottingham 2003)","Don''t Stay (Live In Nottingham 2003)","Somewhere I Belong (Live In Nottingham 2003)","Lying From You (Live In Nottingham 2003)","Papercut (Live In Nottingham 2003)","Points Of Authority (Live In Nottingham 2003)","Runaway (Live In Nottingham 2003)","Faint (Live In Nottingham 2003)","From The Inside (Live In Nottingham 2003)","Hit The Floor (Live In Nottingham 2003)","With You (Live In Nottingham 2003)","Crawling (Live In Nottingham 2003)","In The End (Live In Nottingham 2003)","Easier To Run (Live In Nottingham 2003)","A Place For My Head (Live In Nottingham 2003)","One Step Closer (Live In Nottingham 2003)","A.06","Pretty Birdy – Somewhere I Belong 2002 Demo","Sold My Soul To Yo Mama","Standing In The Middle","Program – Meteora Demo","Faint – Demo 2002","Figure.09 – Demo 2002","Drawing – Breaking The Habit Demo 2002","Cumulus – 2002 Demo","A-Six – Original Long Version","Soundtrack – Meteora Demo","Broken Foot – Meteora Demo","Ominous – Meteora Demo","Unfortunate – Unreleased Demo 2002","Pepper – Meteora Demo","Breaking The Habit – Original Mike 2002 Demo","Halo – Unreleased Demo 2002","Rhinocerous – 2002 Demo","Attached – 2002 Demo","Lying From You (Live LPU Tour 2003)","From The Inside (Live LPU Tour 2003)","Easier To Run (Live LPU Tour 2003)","Step Up (Live Projekt Revolution 2002)","My December (Live Projekt Revolution 2002)","Crawling (Live Reading Festival 2003)","Breaking The Habit (Live Rock Am Ring 2004)","Step Up / Nobody''s Listening / It''s Going Down (Live)","Wish (Live Projekt Revolution 2004)","One Step Closer feat. Jonathan Davis (Live Projekt Revolution 2004)","Lost","Fighting Myself","More The Victim","Massive","Healing Foot","A-06 Meteora|20 Demo","Cuidado – Lying From You Demo","Husky – Hit The Floor Demo","Interrogation – Easier To Run Demo","Faint – Meteora|20 Demo","Plaster 2 – Figure.09 Demo","Shifter – From The Inside Demo","Wesside","Resolution"]',
+  '2023-04-07',
+  25,
+  'Linkin Park',
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
+),
+
+-- 11. From Zero Deluxe Edition (2024)
+(
+  'From Zero (Deluxe Edition)',
+  'https://static.fnac-static.com/multimedia/Images/FR/NR/55/b4/1f/18854997/1520-1/tsp20250327145107/From-Zero-Edition-Deluxe.jpg',
+  'Rock-Alternatif',
+  '["From Zero (Intro)","The Emptiness Machine","Cut the Bridge","Heavy Is the Crown","Over Each Other","Casualty","Overflow","Two Faced","Stained","IGYEIH","Good Things Go","Up From The Bottom","Unshatter","Let You Fade"]',
+  '2024-11-15',
+  18,
+  'Linkin Park',
+  'https://bocir-medias-prod.s3.fr-par.scw.cloud/medias/6cOIUcKx8a/image/linkin_park1725613312157-format1by1.png'
+),
+
+-- 12. Papercuts (Singles Collection 2000–2023) (2023)
+(
+  'Papercuts (Singles Collection 2000–2023)',
+  'http://localhost/Track-Loader/assets/albums/papercuts.jpg',
+  'Rock-Alternatif',
+  '["Crawling","Faint","Numb/Encore","Papercut","Breaking the Habit","In the End","Bleed It Out","Somewhere I Belong","Waiting for the End","Castle of Glass","One More Light","Burn It Down","What I''ve Done","Qwerty","One Step Closer","New Divide","Leave Out All the Rest","Lost","Numb","Friendly Fire"]',
+  '2023-11-10',
+  14,
+  'Linkin Park',
+  'https://www.rollingstone.fr/wp-content/uploads/2025/03/Linkin-Park-2025.jpg'
+),
+
 -- ============================================================
 --  NF  |  Hip-Hop
 -- ============================================================
